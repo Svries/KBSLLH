@@ -55,7 +55,14 @@ and open the template in the editor.
             <p class="menu2"><a href="">Inloggen</a></p>
         </div>
         <div class="info">
-                    <div class="gastmenu"></div>
+            <div class="gastmenu">
+                <ul>
+                    <li>Jaar/Maand/Dag</li>
+                    <li>Jaar/Maand/Dag</li>
+                    <li>Jaar/Maand/Dag</li>
+                    <li>Jaar/Maand/Dag</li>
+                </ul>
+            </div>
         <div class="gastberichten"></div>
         </div>
 
