@@ -55,5 +55,7 @@ and open the template in the editor.
             <p class="menu2"><a href="">Inloggen</a></p>
         </div>
         <div class="info"></div>
+        <div class="gastmenu"></div>
+        <div class="gastberichten"></div>
     </body>
 </html>
