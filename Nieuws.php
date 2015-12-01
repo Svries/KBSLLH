@@ -9,6 +9,8 @@
             <?php include 'header.php'; ?>
         </header>
 
+        <div class="info">
+
         </div>
     </body>
 </html>

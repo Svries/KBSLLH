@@ -24,7 +24,7 @@
                     </ul>
                     
                     <ul>
-                        <li><a href="inschrijf.php">Personages</a></li>
+                        <li><a href="Personages.php">Personages</a></li>
                     </ul>
 
                     <ul>
@@ -40,7 +40,7 @@
                     </ul>
                     
                     <ul>
-                        <li><a href="Personages.php">Contact</a></li>
+                        <li><a href="Contact.php">Contact</a></li>
                     </ul>
                 </div>    
                 
