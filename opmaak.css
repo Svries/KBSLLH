@@ -108,41 +108,10 @@ p.menu2:hover {
     width: 150px;
 }
 
-.overons_l {
-    float: left;
-    width: 50%;
-}
-
-.inleiding {
-    font-family: 'Georgia';
-    font-size: 20px;
-}
-
-.overons_r {
-    float: right;
-    width: 65%;
-}
-
 img.personagefoto {
     padding: 0px;
     margin: 0px;
     width: 150px;
-    position: relative;
-}
-
-img.overonsfoto {
-    padding: 10px;
-    margin: 0px;
-    background-color: lightgrey;
-    width: 40%;
-    position: relative;
-}
-
-img.overonsfoto2 {
-    padding: 10px;
-    margin: 0px;
-    background-color: lightgrey;
-    width: 30%;
     position: relative;
 }
 
@@ -154,67 +123,3 @@ img.agenda {
     position: relative;
 }
 
-.inschrijf_form input{
-    height:30px;
-    width:200px;
-    padding:3px;
-    margin-bottom:10px;
-    font-size:20px;
-}
-
-.inschrijf  {
-    font-family: 'Macondo';
-}
-
-.inschrijf_form {
-    font-size:21px;
-    font-family: 'Macondo';
-}
-
-.radio {
-    margin-left:-80px;
-    margin-right:-20px;
-}
-
-/* Gastenboek */
-
-.gastmenu {
-    padding: 10px;
-    width: 120px;
-    height: 200px;
-    background-color: lightgray;
-    position: relative;
-    float: left;
-}
-
-.gastmenu li {
-    font-family:'Macondo';
-    list-style: none;
-    position: relative;
-    float: left;
-    margin: -10px 0px 10px -50px;
-    height: 25px;
-    width: 120px;
-    text-align: center;
-    padding: 10px;
-
-}
-
-.gastmenu li:hover{
-    background-color: blue;
-    width: 120px;
-    
-}
-
-.gastberichten {
-    padding: 0px;
-    margin: 0px 0px 0px 10px;
-    background-color: lightgrey;
-    height: 1000px;
-    width: 900px;
-    float: left;
-    position: relative;
-}
-
-p.gastbericht {
-}

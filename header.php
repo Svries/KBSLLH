@@ -9,7 +9,14 @@
                     </ul>
 
                     <ul>
-                        <li><a href="info.php">Over ons</a></li>
+                        <li><a href="info.php">Geschiedenis</a></li>                                
+                            <ul>
+                                <li><a href="">Evenement 1</a></li>
+                                <li><a href="">Evenement 2</a></li>
+                                <li><a href="">Evenement 3</a></li>
+                                <li><a href="">Evenement 4</a></li>
+                                <li><a href="">Evenement 5</a></li>
+                            </ul>
                     </ul>
                     
                     <ul>
@@ -17,15 +24,11 @@
                     </ul>
                     
                     <ul>
-                        <li><a href="Gastenboek.php">Gastenboek</a></li>
-                    </ul>
-                    
-                    <ul>
-                        <li><a href="inschrijf.php">Inschrijven</a></li>
+                        <li><a href="inschrijf.php">Personages</a></li>
                     </ul>
 
                     <ul>
-                        <li><a href="Fotoboek.php">Fotoboek</a>                                
+                        <li><a href="Fotoboek.php">Fotoboek</a></li>                                
                             <ul>
                                 <li><a href="">Evenement 1</a></li>
                                 <li><a href="">Evenement 2</a></li>
@@ -37,7 +40,7 @@
                     </ul>
                     
                     <ul>
-                        <li><a href="Personages.php">Personages</a></li>
+                        <li><a href="Personages.php">Contact</a></li>
                     </ul>
                 </div>    
                 
