@@ -75,6 +75,10 @@
     height: 1100px;
 }
 
+.agenda {
+margin: 20px 20px 20px 20px;
+}
+
 a {
     text-decoration: none;
 }
@@ -115,11 +119,4 @@ img.personagefoto {
     position: relative;
 }
 
-img.agenda {
-    padding: 10px;
-    margin: 300px;
-    background-color: lightgrey;
-    width: 70%;
-    position: relative;
-}
 
