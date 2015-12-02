@@ -1,5 +1,21 @@
-        <div class="banner">
-            <img src="http://www.levendehistorieharderwijk.nl/pics/intro2.gif"/>
+        
+    <html>
+        <head>
+            <link href="slideshow.css" rel="stylesheet" type="text/css"/>
+         </head>
+            <body>
+            <div class="banner">
+                <!-- -------------------slideshowcode----------------------------------------------------------- -->
+                <div id="slider-container1">
+                 <div class="wn_images"><ul>
+                    <li><a href="#"><img src="http://img.webnots.com/2013/08/Nature.jpg" alt="Nature"/></a></li>
+                    <li><a href="#"><img src="http://img.webnots.com/2013/08/Explore.jpg" alt="Explore"/></a></li>
+                    <li><a href="#"><img src="http://img.webnots.com/2013/08/Adventure.jpg" alt="Church"/></a></li>
+                </ul>
+                </div>
+                <!-- ------------------------------------------------------------------------------------------- -->
+            </div>
+            <!-- <img src="http://www.levendehistorieharderwijk.nl/pics/intro2.gif"/> -->
         </div>
             
         <div class="nav">
@@ -47,3 +63,5 @@
             <p class="menu2"><a href="">Inloggen</a></p>
             
         </div>
+        </body>
+    </html>
