@@ -123,3 +123,17 @@ img.agenda {
     position: relative;
 }
 
+p.personageinfo {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.infopersonage {
+    margin: 10px;
+    width: 50px;
+    
+}
+
+
+
