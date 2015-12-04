@@ -18,7 +18,7 @@
         	<section>
         		<div class="gallery">
         			<ul>
-        				<li><img src="http://i68.tinypic.com/2dqlmwk.jpg" width="100" height="100" alt="dal"></li>
+        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
         				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
         				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
         				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
