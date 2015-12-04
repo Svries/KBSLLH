@@ -1,5 +1,26 @@
 <?php
 	require 'connection.php';
+
+$melding = "";
+$naam = "";
+if (isset($_GET["naam"])) {
+    $naam = $_GET["naam"];
+}
+
+$achternaam = "";
+if (isset($_GET["achternaam"])) {
+    $achternaam = $_GET["achternaam"];
+}
+
+$spelersnaam = "";
+if (isset($_GET["spelersnaam"])) {
+    $spelersnaam = $_GET["spelersnaam"];
+}
+
+$email = "";
+if (isset($_GET["email"])) {
+    $email = $_GET["email"];
+}
 	if (isset($_POST["toevoegen"])) {
 	    // op toevoegen geklikt, nummer bestaat en nummer is niet leeg
 	    $query = $con->prepare("INSERT INTO gebruiker(naam, achternaam, spelersnaam, email) VALUES(?,?,?,?)");

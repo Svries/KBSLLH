@@ -8,7 +8,7 @@
 			<?php include 'header.php'; ?>
 		</header>
         <div class="info">
-            
+            <a href="spelersoverzicht.php">Spelersoverzicht</a>
         </div>
         
     </body>

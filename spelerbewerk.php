@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 
 <?php
-$melding = "";
-$id = "";
-$naam = "";
-$woonplaats = "";
-
 require 'connection.php';
+$melding = "";
+$naam = "";
+if (isset($_GET["naam"])) {
+    $naam = $_GET["naam"];
+}
+
+$achternaam = "";
+if (isset($_GET["achternaam"])) {
+    $woonplaats = $_GET["achternaam"];
+}
+
+$achternaam = "";
+if (isset($_GET["achternaam"])) {
+    $woonplaats = $_GET["achternaam"];
+}
+
+$spelersnaam = "";
+if (isset($_GET["spelersnaam"])) {
+    $woonplaats = $_GET["spelersnaam"];
+}
+
+$email = "";
+if (isset($_GET["email"])) {
+    $woonplaats = $_GET["email"];
+}
+
+if (isset($_GET["email"])) {
+    $woonplaats = $_GET["email"];
+}
 if (isset($_GET["id"]) && $_GET["id"] != "") {
     $id = $_GET["id"];
     try {
@@ -67,7 +91,7 @@ if (isset($_GET["id"]) && $_GET["id"] != "") {
         </form>
         <br>
         <?php print($melding); ?>
-        <br>
+        <br><br>
         <a class="flat-table" href="spelersoverzicht.php">Terug naar het overzicht</a>
         </div>
     </body>

@@ -21,7 +21,7 @@
         <div class="nav">
                 <div class="navmenu">
                     <ul>
-                        <li><a href="Hoofdpagina.php">Hoofdpagina</a></li>
+                        <li><a href="index.php">Hoofdpagina</a></li>
                     </ul>
 
                     <ul>
@@ -60,7 +60,7 @@
                     </ul>
                 </div>    
                 
-            <p class="menu2"><a href="">Inloggen</a></p>
+            <p class="menu2"><a href="loginpage.php">Inloggen</a></p>
             
         </div>
         </body>
