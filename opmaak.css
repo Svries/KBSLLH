@@ -3,7 +3,9 @@
 =              Header				 =
 =									 =
 ====================================*/
-
+* {
+    font-family: 'Macondo';
+}
 .banner {
     text-align: center;
     border: 2px solid black;
@@ -44,7 +46,6 @@
 .navmenu ul li a {
     text-align: center;
     padding: 10px 0px 0px 0px;
-    font-family: 'Macondo';
     text-decoration: none;
     height: 30px;
     width: 120px;
@@ -76,7 +77,7 @@
 }
 
 .agenda {
-margin: 20px 20px 20px 20px;
+    margin: 20px 20px 20px 20px;
 }
 
 a {
@@ -132,5 +133,32 @@ p.personageinfo {
     
 }
 
+/*====================================
+=                                    =
+=              Header                =
+=                                    =
+====================================*/
 
+.flat-table table {
+    display: block;
+    overflow: auto;
+    width: auto;
+}
+.flat-table th {
+    background-color: rgb(112, 196, 105);
+    color: white;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+  }
 
+.flat-table {
+    background-color: rgb(238, 238, 238);
+    color: rgb(111, 111, 111);
+    padding: 10px 20px;
+  }
+
+.flat-table a {
+    text-decoration: none;  
+    color: rgb(112, 196, 105);
+}
