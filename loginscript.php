@@ -23,13 +23,14 @@ else {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    $password = sha1($password);
     try
     {
         require_once 'connection.php';
 
         /*** prepare the select statement ***/
         $stmt = $con->prepare("SELECT id, email, password FROM gebruiker 
-                    WHERE email = email AND password = password");
+                    WHERE email = :email AND password = :password");
 
         /*** bind the parameters ***/
         $stmt->bindParam('email', $email, PDO::PARAM_STR);
