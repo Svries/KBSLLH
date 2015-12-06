@@ -1,59 +1,57 @@
 /*-----------Slideshow Code------------*/
-<!-- Simple Slider from WebNots -->
-<!-- This is CSS code -->
-<style type="text/css">
 
 #slider-container1 { 
-zoom: 1; 
-max-width: 1300px;
-max-height:360px;
-z-index:90;
-margin: 10px 10px 10px 10px;
+	zoom: 1; 
+	max-width: 1300px;
+	max-height:360px;
+	z-index:90;
+	margin: 10px 10px 10px 10px;
 }
  
 #slider-container1 .wn_images ul{
-position:relative;
-width: 10000%; 
-height:100%;
-left:0;
-list-style:none;
-margin:0;
-padding:0;
-border-spacing:0;
-overflow: visible;
+	position:relative;
+	width: 10000%; 
+	height:100%;
+	left:0;
+	list-style:none;
+	margin:0;
+	padding:0;
+	border-spacing:0;
+	overflow: visible;
 }
+
 #slider-container1 .wn_images ul li{
-position: relative;
-width:1%;
-height:100%;
-line-height:0; /*opera*/
-overflow: hidden;
-float:left;
-font-size:0;
-padding:0 0 0 0 !important;
-margin:0 0 0 0 !important;
+	position: relative;
+	width:1%;
+	height:100%;
+	line-height:0; /*opera*/
+	overflow: hidden;
+	float:left;
+	font-size:0;
+	padding:0 0 0 0 !important;
+	margin:0 0 0 0 !important;
 }
  
 #slider-container1 .wn_images{
-position: relative;
-left:0;
-top:0;
-height:100%;
-max-height:360px;
-max-width: 100%;
-vertical-align: top;
-border:none;
-overflow: hidden;
+	position: relative;
+	left:0;
+	top:0;
+	height:100%;
+	max-height:360px;
+	max-width: 100%;
+	vertical-align: top;
+	border:none;
+	overflow: hidden;
 }
  
 #slider-container1 .wn_images > ul{
-animation: wnBasic 5s infinite;
--moz-animation: wnBasic 5s infinite;
--webkit-animation: wnBasic 5s infinite;
-}
-@keyframes wnBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
-@-moz-keyframes wnBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
-@-webkit-keyframes wnBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
+	animation: wnBasic 20s infinite;
+	-moz-animation: wnBasic 20s infinite;
+	-webkit-animation: wnBasic 20s infinite;
+	}
+	@keyframes wnBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
+	@-moz-keyframes wnBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
+	@-webkit-keyframes wnBasic{0%{left:-0%} 16.67%{left:-0%} 33.33%{left:-100%} 50%{left:-100%} 66.67%{left:-200%} 83.33%{left:-200%} }
 
 
 

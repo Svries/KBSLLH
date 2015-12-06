@@ -80,7 +80,7 @@
     margin: 20px 20px 20px 20px;
 }
 
-a {
+.nav a {
     text-decoration: none;
 }
 
@@ -139,25 +139,35 @@ p.personageinfo {
 =                                    =
 ====================================*/
 
+
 .flat-table table {
     display: block;
     overflow: auto;
     width: auto;
+    font-size: 115%;
+    webkit-font-smoothing: antialiased;
+    color: rgb(111, 111, 111);
 }
+
 .flat-table th {
     background-color: rgb(112, 196, 105);
     color: white;
     font-weight: normal;
     padding: 20px 30px;
     text-align: center;
+    border:1px solid white;
   }
 
-.flat-table {
+.flat-table td {
     background-color: rgb(238, 238, 238);
     color: rgb(111, 111, 111);
     padding: 10px 20px;
+    border:1px solid white;
   }
 
+.centertext {
+    text-align:center;
+}
 .flat-table a {
     text-decoration: none;  
     color: rgb(112, 196, 105);

@@ -2,6 +2,7 @@
 
 <?php
 require 'connection.php';
+
 $melding = "";
 $naam = "";
 if (isset($_GET["naam"])) {
@@ -31,6 +32,7 @@ if (isset($_GET["email"])) {
 if (isset($_GET["email"])) {
     $woonplaats = $_GET["email"];
 }
+
 if (isset($_GET["id"]) && $_GET["id"] != "") {
     $id = $_GET["id"];
     try {
@@ -79,7 +81,7 @@ if (isset($_GET["id"]) && $_GET["id"] != "") {
                     <th></th>
                 </tr>
                 <tr>
-                    <td><input type="text" name="id" value="<?php print($id); ?>" size="4" disabled=""></td>
+                    <td class="centertext"><input type="text" name="id" value="<?php print($id); ?>" size="4" disabled=""></td>
                     <td><input type="text" name="naam" value="<?php print($naam); ?>"></td>
                     <td><input type="text" name="achternaam" value="<?php print($achternaam); ?>"></td>
                     <td><input type="text" name="spelersnaam" value="<?php print($spelersnaam); ?>"></td>
