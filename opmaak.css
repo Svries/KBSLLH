@@ -73,7 +73,7 @@
     background-color: grey;
     padding: 10px;
     margin: 10px 200px 0px 200px;
-    height: 1100px;
+    height: auto;
 }
 
 .agenda {
@@ -104,34 +104,30 @@ p.menu2:hover {
     background-color: lightgrey;
 }
 
-.personage {
-    padding: 10px;
-    margin: 30px 60px 30px 40px;
-    float: left;
-    background-color: lightgrey;
-    height: 200px;
-    width: 150px;
-}
+/*====================================
+=                                    =
+=            Personages              =
+=                                    =
+====================================*/
 
 img.personagefoto {
     padding: 0px;
     margin: 0px;
     width: 150px;
+    z-index: 11;
+}
+
+.persoregel {
+    width: 100%;
+    height: 300px;
+    border: 0px solid transparent;
     position: relative;
-}
-
-
-p.personageinfo {
     text-align: center;
-    text-decoration: none;
-    color: black;
+    z-index: 10;
+    padding-bottom: 100px;
+    display: static;
 }
 
-.infopersonage {
-    margin: 10px;
-    width: 50px;
-    
-}
 
 /*====================================
 =                                    =
