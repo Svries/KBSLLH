@@ -9,6 +9,7 @@ if(!isset($_SESSION['user_id']))
 } else {
 require 'connection.php';
 
+
 $melding = "";
 $naam = "";
 if (isset($_GET["naam"])) {

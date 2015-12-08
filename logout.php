@@ -10,6 +10,6 @@ session_unset();
 session_destroy();
 
 // Stuurt de gebruiker terug naar de login pagina
-header ('location: loginpage.php');
+header ('location: index.php');
 ?>
 

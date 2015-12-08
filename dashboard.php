@@ -5,39 +5,39 @@ session_start();
 
 if(!isset($_SESSION['user_id']))
 {
-    $message = 'You must be logged in to access this page';
+    $message = 'Je moet ingelogd zijn om deze pagina kunnen te bekijken';
 }
 else
 {
     try
     {
         require_once 'connection.php';
-        /*** prepare the insert ***/
+        /*** Bereid de query voor ***/
         $stmt = $con->prepare("SELECT email FROM gebruiker 
         WHERE id = :id");
 
-        /*** bind the parameters ***/
+        /*** bind de parameters ***/
         $stmt->bindParam(':id', $_SESSION['user_id'], PDO::PARAM_INT);
 
-        /*** execute the prepared statement ***/
+        /*** Voert het hiervoor bereide statement uit***/
         $stmt->execute();
 
         /*** check for a result ***/
         $email = $stmt->fetchColumn();
 
-        /*** if we have no something is wrong ***/
+        /*** Als er nee uitkomt is er iets fout gegaan ***/
         if($email == false)
         {
             $message = 'Access Error';
         }
         else
         {
-            $message = 'Welcome '.$email;
+            $message = 'Welkom '.$email;
         }
     }
     catch (Exception $e)
     {
-        /*** if we are here, something is wrong in the database ***/
+        /*** als je hier komt is eriets fout in de database ***/
         $message = 'We are unable to process your request. Please try again later"';
     }
 }

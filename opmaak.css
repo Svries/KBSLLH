@@ -104,9 +104,10 @@ p.menu2:hover {
     background-color: lightgrey;
 }
 
-.login-a {
-    background-color:white;
+.menu2 a {
+      color:black;
 }
+
 /*====================================
 =                                    =
 =            Personages              =
