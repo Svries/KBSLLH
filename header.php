@@ -8,7 +8,7 @@
                 <!-- -------------------slideshowcode----------------------------------------------------------- -->
                 <div id="slider-container1">
                  <div class="wn_images"><ul>
-                    <li><a href="#"><img src="http://img.webnots.com/2013/08/Nature.jpg" alt="Nature"/></a></li>
+                    <li><a href="#"><img src="http://www.levendehistorieharderwijk.nl/gebruikte%20fotos/Groepsfoto_2012.JPG" alt="Nature"/></a></li>
                     <li><a href="#"><img src="http://img.webnots.com/2013/08/Explore.jpg" alt="Explore"/></a></li>
                     <li><a href="#"><img src="http://img.webnots.com/2013/08/Adventure.jpg" alt="Church"/></a></li>
                 </ul>
