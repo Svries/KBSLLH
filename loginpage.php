@@ -8,7 +8,7 @@
             <?php include 'header.php'; ?>
         </header>
         <div class="info">
-			<h2>Login Here</h2>
+			<h2>Inloggen</h2>
 			<form action="loginscript.php" method="post">
 				<fieldset>
 					<p>

@@ -54,13 +54,26 @@
                             </ul>
                         </li>
                     </ul>
-                    
                     <ul>
                         <li><a href="Contact.php">Contact</a></li>
                     </ul>
+
+                    <?php
+                    if(isset( $_SESSION['user_id'] ))
+                    {
+                    echo "<ul><li><a href=\"spelersoverzicht.php\">Spelersoverzicht</a></li></ul>";
+                    }
+                    ?>
                 </div>    
                 
-            <p class="menu2"><a href="loginpage.php">Inloggen</a></p>
+                    <?php
+                    if(!isset( $_SESSION['user_id'] ))
+                    {
+                        echo "<p class=\"menu2\"><a href=\"loginpage.php\">Inloggen</a></p>";
+                    } else {
+                        echo "<p class=\"menu2\"><a href=\"logout.php\">Uitloggen</a></p>";
+                    }
+                    ?>
             
         </div>
         </body>
