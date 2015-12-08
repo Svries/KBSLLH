@@ -10,7 +10,7 @@ if(isset( $_SESSION['user_id'] )) {
 }
 /*** check that both the username, password have been submitted ***/
 if(!isset( $_POST['email'], $_POST['password'])) {
-	$message = 'Voer een geldig naam of wachtwoord in!';
+	$message = 'Voer een geldige naam of wachtwoord in!';
 } 
 
 elseif (strlen( $_POST['password']) > 20 || strlen($_POST['password']) < 4) {
@@ -54,7 +54,7 @@ else {
                 $_SESSION['user_id'] = $user_id;
 
                 /*** tell the user we are logged in ***/
-                $message = 'You are now logged in';
+                header ('location: dashboard.php');
         }
 
 
