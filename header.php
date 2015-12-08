@@ -1,4 +1,9 @@
 <?php 
+
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 ?>
         <head>
             <link href="slideshow.css" rel="stylesheet" type="text/css"/>
@@ -62,7 +67,7 @@
 
                     if(isset( $_SESSION['user_id'] ))
                     {
-                    echo "<ul><li><a href=\"spelersoverzicht.php\">Spelersoverzicht</a></li></ul>";
+                    echo "<ul><li><a href=\"dashboard.php\">Administrator</a></li></ul>";
                     }
                     ?>
                 </div>    

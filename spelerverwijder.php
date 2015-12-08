@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<?php 
+session_start();
+
+if(!isset($_SESSION['user_id']))
+{
+    header('location: loginpage.php');
+}
+?>
 <html>
     <head>
             <?php include 'head.php';?>

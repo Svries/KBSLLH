@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 
 <?php
+session_start();
+
+if(!isset($_SESSION['user_id']))
+{
+    header('location: loginpage.php');
+} else {
 require 'connection.php';
 
 $melding = "";
@@ -57,6 +63,7 @@ if (isset($_GET["id"]) && $_GET["id"] != "") {
     $con = NULL;
 } else {
     $melding = "Het id nummer ontbreekt";
+}
 }
 ?>
 <html>
