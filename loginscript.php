@@ -10,7 +10,7 @@ if(isset( $_SESSION['user_id'] )) {
 }
 /*** Checkt of het wachtwoord en gebruikersnaam zijn ingevuld ***/
 if(!isset( $_POST['email'], $_POST['password'])) {
-	$message = 'Voer een geldig naam of wachtwoord in!';
+	$message = 'Voer een geldige naam of wachtwoord in!';
 } 
 
 else {
@@ -48,8 +48,8 @@ else {
                 /*** De sessie in  een variabele zetten ***/
                 $_SESSION['user_id'] = $user_id;
 
-                /*** Succesvol ingelogd ***/
 
+                /*** tell the user we are logged in ***/
                 header ('location: dashboard.php');
         }
 
@@ -62,12 +62,3 @@ else {
     }
 }
 ?>
-
-<html>
-<head>
-<title>PHPRO Login</title>
-</head>
-<body>
-<?php echo $message; ?>
-</body>
-</html>
