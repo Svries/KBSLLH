@@ -56,8 +56,9 @@
         }
 
         .gallery {
-        	width:528px;
+        	width:100%;
         	margin:auto;
+            text-align: center
         }
 
         #content {
@@ -70,7 +71,7 @@
         }
 
         .gallery li {
-        	float:left;
+        	display: inline-block;
         	margin:10px;
         }
         .gallery img {
