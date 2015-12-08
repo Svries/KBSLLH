@@ -104,6 +104,9 @@ p.menu2:hover {
     background-color: lightgrey;
 }
 
+.login-a {
+    background-color:white;
+}
 /*====================================
 =                                    =
 =            Personages              =
@@ -168,3 +171,55 @@ img.personagefoto {
     text-decoration: none;  
     color: rgb(112, 196, 105);
 }
+
+/*====================================
+=                                    =
+=              Fotoboek              =
+=                                    =
+====================================*/
+
+
+
+        article, aside, figure, footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            font-family:arial;
+        }
+
+        .container {
+            width:700px;
+            margin:30px auto 0;
+        }
+
+        .gallery {
+            width:100%;
+            margin:auto;
+            text-align: center
+        }
+
+        #content {
+            background:grey;            
+            overflow:hidden;
+        }
+
+        .gallery ul {
+            list-style:none;
+        }
+
+        .gallery li {
+            display: inline-block;
+            margin:10px;
+        }
+        .gallery img {
+            display:block;
+            padding:5px;
+            background:#42517f;
+            border:1px solid #99adeb;
+            box-shadow:1px 1px 2px #000;
+        }
+
+        .gallery img:hover {
+            border:1px solid #fff;
+        }

@@ -1,5 +1,5 @@
-        
-    <html>
+<?php 
+?>
         <head>
             <link href="slideshow.css" rel="stylesheet" type="text/css"/>
          </head>
@@ -42,7 +42,7 @@
                     <ul>
                         <li><a href="Personages.php">Personages</a></li>
                     </ul>
-
+                      
                     <ul>
                         <li><a href="Fotoboek.php">Fotoboek</a></li>                                
                             <ul>
@@ -54,14 +54,32 @@
                             </ul>
                         </li>
                     </ul>
-                    
                     <ul>
                         <li><a href="Contact.php">Contact</a></li>
                     </ul>
+
+                    <?php
+                     if(isset($_SESSION['user_id'])) {
+
+                        echo ("<ul><li><a class=\"login-a\" href=\"dashboard.php\">Dashboard</a></li></ul>");
+
+                     }
+                       if(isset($_SESSION['user_id'])) {
+                        echo ("<ul><li><a class=\"login-a\" href=\"spelersoverzicht.php\">Spelersoverzicht</a></li></ul>");
+                         }
+                    ?>
+
                 </div>    
-                
-            <p class="menu2"><a href="loginpage.php">Inloggen</a></p>
+            <?php
+
+            if(isset($_SESSION['user_id'])) {
+                echo ("<p class=\"menu2\"><a href=\"logout.php\">Uitloggen</a></p>");
+            } else {
+                echo ("<p class=\"menu2\"><a href=\"loginpage.php\">Inloggen</a></p>");
+            }
+
             
+            ?>            
         </div>
         </body>
     </html>

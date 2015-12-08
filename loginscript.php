@@ -1,25 +1,21 @@
 <?php
 
-/*** begin our session ***/
+/*** Start de sessie ***/
 session_start();
 
-/*** check if the users is already logged in ***/
+/*** Kijkt of er al een sessie bestaat ***/
 if(isset( $_SESSION['user_id'] )) {
 
-    $message = 'Users is already logged in';
+    $message = 'Gebruiker is al ingelogd!';
 }
-/*** check that both the username, password have been submitted ***/
+/*** Checkt of het wachtwoord en gebruikersnaam zijn ingevuld ***/
 if(!isset( $_POST['email'], $_POST['password'])) {
 	$message = 'Voer een geldig naam of wachtwoord in!';
 } 
 
-elseif (strlen( $_POST['password']) > 20 || strlen($_POST['password']) < 4) {
-    $message = 'Incorrect Length for Password';
-}
-
 else {
 
-    /*** if we are here the data is valid and we can insert it into database ***/
+    /*** Variabelen aanmaken en password hashen ***/
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -28,41 +24,41 @@ else {
     {
         require_once 'connection.php';
 
-        /*** prepare the select statement ***/
+        /*** Query ***/
         $stmt = $con->prepare("SELECT id, email, password FROM gebruiker 
                     WHERE email = :email AND password = :password");
 
-        /*** bind the parameters ***/
+        /*** Bind de parameters aan elkaar ***/
         $stmt->bindParam('email', $email, PDO::PARAM_STR);
         $stmt->bindParam('password', $password, PDO::PARAM_STR);
 
-        /*** execute the prepared statement ***/
+        /*** Voert het hierboven gemaakte statement uit ***/
         $stmt->execute();
 
-        /*** check for a result ***/
+        /*** Kijkt of er een resultaat is ***/
         $user_id = $stmt->fetchColumn();
 
-        /*** if we have no result then fail boat ***/
+        /*** Als er geen resultaat is, foute gegevens ***/
         if($user_id == false)
         {
-                $message = 'Login Failed';
+               header ('location: loginpage.php');
         }
-        /*** if we do have a result, all is well ***/
         else
         {
-                /*** set the session user_id variable ***/
+                /*** De sessie in  een variabele zetten ***/
                 $_SESSION['user_id'] = $user_id;
 
-                /*** tell the user we are logged in ***/
-                $message = 'You are now logged in';
+                /*** Succesvol ingelogd ***/
+
+                header ('location: dashboard.php');
         }
 
 
     }
     catch(Exception $e)
     {
-        /*** if we are here, something has gone wrong with the database ***/
-        $message = 'We are unable to process your request. Please try again later"';
+        /*** Database fout ***/
+        $message = 'Er is iets fout gegaan..."';
     }
 }
 ?>
@@ -72,6 +68,6 @@ else {
 <title>PHPRO Login</title>
 </head>
 <body>
-<p><?php echo $message; ?>
+<?php echo $message; ?>
 </body>
 </html>
