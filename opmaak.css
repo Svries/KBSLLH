@@ -130,6 +130,43 @@ img.personagefoto {
     padding-bottom: 100px;
     display: static;
 }
+/*====================================
+=                                    =
+=              AGENDA                =
+=                                    =
+====================================*/
+.agenda table {
+    display: block;
+    overflow: auto;
+    width: auto;
+    font-size: 115%;
+    webkit-font-smoothing: antialiased;
+    color: rgb(0, 0, 51);
+}
+
+.agenda th {
+    background-color: rgb(51, 51, 102);
+    color: white;
+    font-weight: normal;
+    padding: 20px 30px;
+    text-align: center;
+    border:1px solid white;
+  }
+
+.agenda td {
+    background-color: rgb(238, 238, 238);
+    color: rgb(111, 111, 111);
+    padding: 10px 20px;
+    border:1px solid white;
+  }
+
+.centertext {
+    text-align:center;
+}
+.agenda a {
+    text-decoration: none;  
+    color: rgb(51, 51, 102);
+}
 
 
 /*====================================
