@@ -101,9 +101,9 @@
         }
 
         .gallery li {
-            float:left;
             margin:10px;
         }
+        
         .gallery img {
             display:block;
             padding:5px;

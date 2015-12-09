@@ -107,7 +107,6 @@
         }
 
         .gallery li {
-            float:left;
             margin:10px;
         	display: inline-block;
         	margin:10px;
