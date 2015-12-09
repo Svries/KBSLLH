@@ -54,7 +54,11 @@
                             </ul>
                         </li>
                     </ul>
-                    
+
+                    <ul>
+                        <li><a href="Nieuws.php">Nieuws</a></li>
+                    </ul>
+
                     <ul>
                         <li><a href="Contact.php">Contact</a></li>
                     </ul>
