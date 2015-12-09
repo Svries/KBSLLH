@@ -13,14 +13,15 @@
            
             <form method="post" action='contact.php'>
             
-            Datum: <br>
-            <input type="text" name="datum" placeholder="01-01-0001">
-                   </br>
+           
             Naam :<br>
             <input type="text" name="naam" placeholder="naam">
-                        <br>
+            <p><?php
+            if (isset($errors["naam"])) echo $errors["naam"]; 
+            ?>
+            </p>
             E-mail :<br>
-            <input type="text" name="mail" placeholder="E-mail" >
+            <input type="text" name="email" placeholder="E-mail" >
              
                 
                 <br>
@@ -35,14 +36,72 @@ schrijf text here...</textarea>
 
                 </br>
           
-            <input type="submit" >
+           <input type="Submit" value="Submit">
             </form>
            <?php
+
+           require 'connection.php';
+
+           //  $dbhost = "localhost";
+           // $dbuser = "root";
+           // $dbpass = "";
+           // $db = "lhh";
+
+           // $conn = mysql_connect($dbhost.$dbuser.$dbpass);
+           // mysql_select_db($db)
+
+           // $query = "select * FROM contact";
+           // $result = mysql_query($query);
+
+           // // // MAG NIET LEEG
+           // // NE MAIL MOET @ IN ZITTEN
+      
+
+
+
+           if(isset($_POST["Submit"]))
+           {
+
+           }
+
+           $errors=array();
            
+           if (empty($_POST["naam"]))
+           { //deze gaat via de error in begin
+            echo $errors["naam"] = "Je naam is kan niet leeg zijn" ;
+             //laat de tekst niet zien?
+            }
+
+            if (empty($_POST["mail"]))
+           { //deze gaat via de error in begin
+                echo "<br/>"; 
+                echo $errors["naam"] = "Je mail kan niet leeg zijn " ;
+           }
+
+          
+          if (isset($_POST["Submit"])) {
+           // op toevoegen geklikt, nummer bestaat en nummer is niet leeg
+         $query = $con->prepare("INSERT INTO contact(naam) VALUES(?)");
+         $query->execute(array($_POST["naam"]));
+          }  
+
+          // $query = $con->prepare("SELECT * FROM gebruiker");
+          // $query->execute();
+          // $gebruikers = $query->fetchAll();
+          // $con = NULL;
+
+       
            
 
-           echo "u naam is : ".$naam=$_post["naam"].
-            "<br/>u maail is :". $mail=$_post["mail"] ;
+        if (count($errors)==0) 
+        { 
+            echo "succes";
+
+
+        }
+
+       // // tijd
+       
 
            
 
@@ -60,3 +119,5 @@ schrijf text here...</textarea>
         </div>
     </body>
 </html>
+
+
