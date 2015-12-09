@@ -4,33 +4,33 @@
     <?php include 'head.php'; ?>
 
     <!--[if IE]>
-  	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
     </head>
     <body>
-      	<header>
-      		<?php include 'header.php'; ?>
-      	</header>
+        <header>
+            <?php include 'header.php'; ?>
+        </header>
         <div class="info">
 
         <div class="container">
-        	<section>
-        		<div class="gallery">
-        			<ul>
-        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
-        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
-        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
-        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
-        			</ul>
-        			<ul>
-        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
-        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
-        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
-        				<li><img src="images/tn/img7.jpg" width="100" height="100" alt="dal"></li>
-        			</ul>
-        		</div>
-        	</section>
+            <section>
+                <div class="gallery">
+                    <ul>
+                        <li><a href="images/large/img7" title="dal"><img src="images/tn/img7" width="100" height="100" alt="dal"></li>
+                        <li><img src="http://i68.tinypic.com/2dqlmwk.jpg" width="100" height="100" alt="dal"></li>
+                        <li><img src="http://i68.tinypic.com/2dqlmwk.jpg" width="100" height="100" alt="dal"></li>
+                        <li><img src="http://i68.tinypic.com/2dqlmwk.jpg" width="100" height="100" alt="dal"></li>
+                    </ul>
+                    <ul>
+                        <li><img src="http://i68.tinypic.com/2dqlmwk.jpg" width="100" height="100" alt="dal"></li>
+                        <li><img src="http://i68.tinypic.com/2dqlmwk.jpg" width="100" height="100" alt="dal"></li>
+                        <li><img src="http://i68.tinypic.com/2dqlmwk.jpg" width="100" height="100" alt="dal"></li>
+                        <li><img src="http://i68.tinypic.com/2dqlmwk.jpg" width="100" height="100" alt="dal"></li>
+                    </ul>
+                </div>
+            </section>
 
         </div>
 
@@ -43,46 +43,46 @@
 
         <style type="text/css">
         article, aside, figure, footer, header, hgroup, menu, nav, section {
-        	display: block;
+            display: block;
         }
 
         body {
-        	font-family:arial;
+            font-family:arial;
         }
 
         .container {
-        	width:700px;
-        	margin:30px auto 0;
+            width:700px;
+            margin:30px auto 0;
         }
 
         .gallery {
-        	width:528px;
-        	margin:auto;
+            width:528px;
+            margin:auto;
         }
 
         #content {
-        	background:grey;        	
-        	overflow:hidden;
+            background:grey;            
+            overflow:hidden;
         }
 
         .gallery ul {
-        	list-style:none;
+            list-style:none;
         }
 
         .gallery li {
-        	float:left;
-        	margin:10px;
+            float:left;
+            margin:10px;
         }
         .gallery img {
-        	display:block;
-        	padding:5px;
-        	background:#42517f;
-        	border:1px solid #99adeb;
-        	box-shadow:1px 1px 2px #000;
+            display:block;
+            padding:5px;
+            background:#42517f;
+            border:1px solid #99adeb;
+            box-shadow:1px 1px 2px #000;
         }
 
         .gallery img:hover {
-        	border:1px solid #fff;
+            border:1px solid #fff;
         }
 
 
