@@ -53,6 +53,7 @@ if (isset($_GET["naam"])) {
                 </tr>
             </table>
         </form>
+        <a href="materiaalperspeler.php">materiaal per speler</a>
         </div>
     </body>
 </html>

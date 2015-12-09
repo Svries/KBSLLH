@@ -9,7 +9,9 @@
 		</header>
         <div class="info">
             <a href="spelersoverzicht.php">Spelersoverzicht</a> <br>
-            <a href="materiaaloverzicht.php">Materiaaloverzicht</a>        
+            <a href="materiaaloverzicht.php">Materiaaloverzicht</a> <br> 
+            <a href="materiaalperspeler.php">Materiaal per speler</a>  <br>
+            <a href="inschrijf.php">Inschrijven evenementen</a>      
         </div>
         
     </body>

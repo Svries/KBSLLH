@@ -1,5 +1,5 @@
-        
-    <html>
+<?php 
+?>
         <head>
             <link href="slideshow.css" rel="stylesheet" type="text/css"/>
          </head>
@@ -8,9 +8,9 @@
                 <!-- -------------------slideshowcode----------------------------------------------------------- -->
                 <div id="slider-container1">
                  <div class="wn_images"><ul>
-                    <li><a href="#"><img src="http://img.webnots.com/2013/08/Nature.jpg" alt="Nature"/></a></li>
-                    <li><a href="#"><img src="http://img.webnots.com/2013/08/Explore.jpg" alt="Explore"/></a></li>
-                    <li><a href="#"><img src="http://img.webnots.com/2013/08/Adventure.jpg" alt="Church"/></a></li>
+                    <li><a href="#"><img src="FOTO/Groepsfoto_2012.JPG" alt="Nature"/></a></li>
+                    <li><a href="#"><img src="FOTO/image-17.jpg" alt="Explore"/></a></li>
+                    <li><a href="#"><img src="FOTO/image-49.jpg" alt="Church"/></a></li>
                 </ul>
                 </div>
                 <!-- ------------------------------------------------------------------------------------------- -->
@@ -42,7 +42,7 @@
                     <ul>
                         <li><a href="Personages.php">Personages</a></li>
                     </ul>
-
+                      
                     <ul>
                         <li><a href="Fotoboek.php">Fotoboek</a></li>                                
                             <ul>
@@ -54,18 +54,36 @@
                             </ul>
                         </li>
                     </ul>
+<<<<<<< HEAD
 
                     <ul>
                         <li><a href="Nieuws.php">Nieuws</a></li>
                     </ul>
 
+=======
+>>>>>>> origin/master
                     <ul>
                         <li><a href="Contact.php">Contact</a></li>
                     </ul>
+
+                    <?php
+
+                    if(isset( $_SESSION['user_id'] ))
+                    {
+                    echo "<ul><li><a href=\"spelersoverzicht.php\">Spelersoverzicht</a></li></ul>";
+                    }
+                    ?>
                 </div>    
                 
-            <p class="menu2"><a href="loginpage.php">Inloggen</a></p>
-            
+                    <?php
+                    if(!isset( $_SESSION['user_id'] ))
+                    {
+                        echo "<p class=\"menu2\"><a href=\"loginpage.php\">Inloggen</a></p>";
+                    } else {
+                        echo "<p class=\"menu2\"><a href=\"logout.php\">Uitloggen</a></p>";
+                    }
+                    ?>
+
         </div>
         </body>
     </html>
