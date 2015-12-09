@@ -54,14 +54,12 @@
                             </ul>
                         </li>
                     </ul>
-<<<<<<< HEAD
+
 
                     <ul>
                         <li><a href="Nieuws.php">Nieuws</a></li>
                     </ul>
 
-=======
->>>>>>> origin/master
                     <ul>
                         <li><a href="Contact.php">Contact</a></li>
                     </ul>
