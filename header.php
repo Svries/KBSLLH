@@ -49,7 +49,7 @@
                     </ul>
                       
                     <ul>
-                        <li><a href="Fotoboek.php">Fotoboek</a></li>                                
+                        <li><a href="FotoboekMenu.php">Fotoboek</a></li>                                
                             <ul>
                                 <li><a href="">Evenement 1</a></li>
                                 <li><a href="">Evenement 2</a></li>
@@ -59,6 +59,12 @@
                             </ul>
                         </li>
                     </ul>
+
+
+                    <ul>
+                        <li><a href="Nieuws.php">Nieuws</a></li>
+                    </ul>
+
                     <ul>
                         <li><a href="Contact.php">Contact</a></li>
                     </ul>

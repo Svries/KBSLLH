@@ -10,8 +10,9 @@
         <div class="info">
             <a href="spelersoverzicht.php">Spelersoverzicht</a> <br>
             <a href="materiaaloverzicht.php">Materiaaloverzicht</a> <br> 
-            <a href="materiaalperspeler.php">Materiaal per speler</a>  <br>
-            <a href="inschrijf.php">Inschrijven evenementen</a>      
+            <a href="materiaalperspeler.php">Materiaal per speler</a> <br>
+            <a href="inschrijf.php">Inschrijven evenementen</a> <br>
+            <a href="eventmaken.php">Plan een nieuwe markt in</a>    
         </div>
         
     </body>

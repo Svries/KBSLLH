@@ -2,24 +2,24 @@
 <?php
 	require 'connection.php';
 
-$naam = "";
-if (isset($_GET["speelnaam"])) {
-    $naam = $_GET["speelnaam"];
+$Naam = "";
+if (isset($_GET["Naam"])) {
+    $Naam = $_GET["Naam"];
 }
 
-$aanwezig = "";
+$Aanwezig = "";
 if (isset($_GET["Aanwezig"])) {
-    $aanwezig = $_GET["Aanwezig"];
+    $Aanwezig = $_GET["Aanwezig"];
 }
 
-$tijd = "";
-if (isset($_GET["tijd1"])) {
-    $tijd = $_GET["tijd1"];
+$Tijd = "";
+if (isset($_GET["Tijd"])) {
+    $Tijd = $_GET["Tijd"];
 }
 
 	if (isset($_POST["inschrijven"])) {
-	    $query = $con->prepare("INSERT INTO inschrijvenevenement(naam, aanwezig, tijd) VALUES(?,?,?)");
-	    $query->execute(array($_POST["naam"], $_POST["Aanwezig"], $_POST["tijd1"]));
+	    $query = $con->prepare("INSERT INTO inschrijvenevenement(Naam, Aanwezig, Tijd) VALUES(?,?,?)");
+	    $query->execute(array($_POST["Naam"], $_POST["Aanwezig"], $_POST["Tijd"]));
 	}
 
 	$query = $con->prepare("SELECT * FROM inschrijvenevenement");
@@ -41,7 +41,7 @@ if (isset($_GET["tijd1"])) {
         		<h3> Inschrijven </h3>
         		<p> Bij het inschrijven vragen we wanneer je aanwezig bent en of je aanwezig bent. Gelieve dit op de voorbeeld manier invullen.</p>
         		Aanwezig: <input type="checkbox" name="Aanwezig"> </br>
-        		Tijd: <input type="text" name="tijd1" value="10:00-17:00">
+        		Tijd: <input type="text" name="tijd" value="10:00-17:00">
         		<input type="submit" name="inschrijven" value="Inschrijven">
 </br></br>
 
@@ -52,11 +52,11 @@ if (isset($_GET["tijd1"])) {
         				<th style="width: 200px;">Tijd</th>
         			</tr>
         			<?php
-                foreach ($naam as $namen) {
+                foreach ($inschrijvenevenement as $namen) {
                     print("\n\t<tr>");      
-                    print("\n\t\t<td>" . $namen["naam"] . "</td>");
+                    print("\n\t\t<td>" . $namen["Naam"] . "</td>");
                     print("\n\t\t<td>" . $namen["Aanwezig"] . "</td>");
-                    print("\n\t\t<td>" . $namen["tijd1"] . "</td>");
+                    print("\n\t\t<td>" . $namen["Tijd"] . "</td>");
                     print("\n\t</tr>");
                 }
                 ?>
