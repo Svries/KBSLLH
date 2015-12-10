@@ -7,8 +7,7 @@
     font-family: 'Macondo';
 }
 .banner {
-    text-align: center;
-    border: 2px solid black;
+    height: 380px;
     margin: 0px 200px 0px 200px;
 }
 

@@ -5,12 +5,15 @@
          </head>
             <body>
             <div class="banner">
-                <!-- -------------------slideshowcode----------------------------------------------------------- -->
+                    <img class="hetlogo" src="FOTO/bannerfoto.jpg" alt="Logo"/>
+
+                <!-- -------------------slideshowcode-------------------------------------------------------------->
+
                 <div id="slider-container1">
                  <div class="wn_images"><ul>
-                    <li><a href="#"><img src="FOTO/Groepsfoto_2012.JPG" alt="Nature"/></a></li>
-                    <li><a href="#"><img src="FOTO/image-17.jpg" alt="Explore"/></a></li>
-                    <li><a href="#"><img src="FOTO/image-49.jpg" alt="Church"/></a></li>
+                    <li><a href="#"><img class="sliderfoto" src="FOTO/Groepsfoto_2012.JPG" alt="Nature"/></a></li>
+                    <li><a href="#"><img class="sliderfoto" src="FOTO/image-17.jpg" alt="Explore"/></a></li>
+                    <li><a href="#"><img class="sliderfoto" src="FOTO/image-49.jpg" alt="Church"/></a></li>
                 </ul>
                 </div>
                 <!-- ------------------------------------------------------------------------------------------- -->
@@ -53,7 +56,6 @@
                                 <li><a href="">Evenement 5</a></li>
                             </ul>
                         </li>
-                    </ul>
 
 
                     <ul>
