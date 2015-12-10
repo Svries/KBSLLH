@@ -16,6 +16,8 @@
 
         <div class="container">
             <section>
+                <h2>Evenement</h2>
+                <p>tekst enzo</p>
                 <div class="gallery">
                     <ul>
                         <li><a class="fancybox" rel="group" href="images/large/Evenement1/img7.jpg" title="dal"><img src="images/tn/Evenement1/img7.jpg" width="100" height="100" alt="dal"></a></li>

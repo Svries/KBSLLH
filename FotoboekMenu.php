@@ -37,7 +37,7 @@
             <section>
                 <div class="gallery">
                     <ul>
-                        <li><a href="" title="EVENEMENT NAAM"href="http://yourlink.com"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
+                        <li><a href="" title="EVENEMENT NAAM"href="http://localhost:8080/KBSLLH/Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
                         <li><a href="" title="EVENEMENT NAAM"href="http://yourlink.com"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
                         <li><a href="" title="EVENEMENT NAAM"href="http://yourlink.com"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
                         <li><a href="" title="EVENEMENT NAAM"href="http://yourlink.com"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
