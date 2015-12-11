@@ -9,10 +9,10 @@
             <link href="slideshow.css" rel="stylesheet" type="text/css"/>
          </head>
             <body>
-            <div class="banner">
+                <div class="banner">
                     <img class="hetlogo" src="FOTO/bannerfoto.jpg" alt="Logo"/>
 
-                <!-- -------------------slideshowcode-------------------------------------------------------------->
+                
 
                 <div id="slider-container1">
                  <div class="wn_images"><ul>
@@ -21,9 +21,8 @@
                     <li><a href="#"><img class="sliderfoto" src="FOTO/image-49.jpg" alt="Church"/></a></li>
                 </ul>
                 </div>
-                <!-- ------------------------------------------------------------------------------------------- -->
-            </div>
-            <!-- <img src="http://www.levendehistorieharderwijk.nl/pics/intro2.gif"/> -->
+           </div>
+          
         </div>
             
         <div class="nav">
@@ -61,12 +60,7 @@
                                 <li><a href="">Evenement 5</a></li>
                             </ul>
                         </li>
-
-
-                    <ul>
-                        <li><a href="Nieuws.php">Nieuws</a></li>
                     </ul>
-
                     <ul>
                         <li><a href="Contact.php">Contact</a></li>
                     </ul>
@@ -75,7 +69,7 @@
 
                     if(isset( $_SESSION['user_id'] ))
                     {
-                    echo "<ul><li><a href=\"dashboard.php\">Administrator</a></li></ul>";
+                            echo "<ul><li><a href=\"dashboard.php\">Administrator</a></li></ul>";
                     }
                     ?>
                 </div>    

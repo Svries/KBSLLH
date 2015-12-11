@@ -60,5 +60,6 @@ else {
         /*** Database fout ***/
         $message = 'Er is iets fout gegaan..."';
     }
+    $con = NULL;
 }
 ?>
