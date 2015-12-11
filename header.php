@@ -48,7 +48,7 @@
                     </ul>
                     
                     <ul>
-                        <li><a href="Personages.php">Personages</a></li>
+                        <li><a href="Personages.php">Spelerspagina</a></li>
                     </ul>
                       
                     <ul>
