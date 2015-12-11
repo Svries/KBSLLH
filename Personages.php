@@ -17,6 +17,14 @@ function showHide(shID) {
 }
 </script>
 <style type="text/css">
+   /* This CSS is for the small text at the top. */
+    .infospeelpagina {
+      width: 100%;
+      border-bottom: 1px solid black;
+      margin-bottom: 25px;
+      box-shadow: 0px 2px;
+    }
+
    /* This CSS is just for presentational purposes. */
    
    .left {
@@ -85,8 +93,25 @@ function showHide(shID) {
         <header>
             <?php include 'header.php'; ?>
         </header>
-<!--- REGEL1 -->
+
         <div class="info">
+          <div class="infospeelpagina">
+            <h3>Spelerspagina</h3>
+              <p>LHH is altijd op zoek naar spelers, die
+                <ul>
+                  <li>een middeleeuwse figuur kunnen uitbeelden</li> 
+                  <li>muziek kunnen maken op een instrument dat in de Middeleeuwen werd gebruikt</li> 
+                  <li>een middeleeuws beroep kunnen uitbeelden</li> 
+                  <li>kunnen jongleren, acteren of op andere manieren actief het publiek kunnen vermaken</li> 
+                </ul>
+                    LHH helpt je bij het samenstellen van je kledingstukken, je wordt bekendgemaakt met de historie in de Middeleeuwen en je krijgt instructies 
+                    in het spelen met elkaar en met het publiek. Na een eerste kennismaking, loop je mee met een mentor en na een bepaalde periode bezien we samen 
+                    of we de goed keuzes gemaakt hebben. </br></br>
+
+                    We verwelkomen iedereen: Oud en vooral ook jong. Neem contact met ons op via het telefoonnummer 06 405 78 385 of mail: levendehistorie@hotmail.com
+              </p>
+          </div>
+<!--- REGEL1 -->          
           <div class="persoregel">
             <div class="left">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
