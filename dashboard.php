@@ -13,8 +13,8 @@ else
     {
         require_once 'connection.php';
         /*** Bereid de query voor ***/
-        $stmt = $con->prepare("SELECT email FROM gebruiker 
-        WHERE id = :id");
+        $stmt = $con->prepare("SELECT spelersnaam FROM gebruiker 
+            WHERE id = :id");
 
         /*** bind de parameters ***/
         $stmt->bindParam(':id', $_SESSION['user_id'], PDO::PARAM_INT);

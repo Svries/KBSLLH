@@ -25,12 +25,14 @@ else {
         require_once 'connection.php';
 
         /*** Query ***/
-        $stmt = $con->prepare("SELECT id, email, password FROM gebruiker 
+        $stmt = $con->prepare("SELECT * FROM gebruiker 
                     WHERE email = :email AND password = :password");
 
         /*** Bind de parameters aan elkaar ***/
         $stmt->bindParam('email', $email, PDO::PARAM_STR);
         $stmt->bindParam('password', $password, PDO::PARAM_STR);
+
+
 
         /*** Voert het hierboven gemaakte statement uit ***/
         $stmt->execute();

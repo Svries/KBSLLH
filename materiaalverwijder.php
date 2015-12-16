@@ -12,6 +12,7 @@
         <?php
         require 'connection.php';
         if (isset($_GET["id"]) && $_GET["id"] != "") {
+            //kijkt of de id is gegeven
             $id = $_GET["id"];
 
             if (isset($_GET['bevestiging'])) {

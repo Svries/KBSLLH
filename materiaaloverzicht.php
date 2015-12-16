@@ -1,6 +1,12 @@
 <?php
-	require 'connection.php';
+require 'connection.php';
 
+session_start();
+
+if(!isset($_SESSION['user_id']))
+{
+    header('location: loginpage.php');
+} else {
 $melding = "";
 $naam = "";
 if (isset($_GET["naam"])) {
@@ -17,6 +23,7 @@ if (isset($_GET["naam"])) {
 	$query->execute();
 	$materiaalen = $query->fetchAll();
 	$con = NULL;
+}
 ?>
 <html>
     <head>
