@@ -9,7 +9,24 @@
             <link href="slideshow.css" rel="stylesheet" type="text/css"/>
          </head>
             <body>
-
+ <!-- achtergrond muziek -->
+                <audio id="myAudio" > <!-- autoplay = "autoplay" -->
+                <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4" type='audio/mp4'>
+                <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga" type='audio/ogg; codecs=vorbis'>
+                    Your user agent does not support the HTML5 Audio element.
+                </audio>
+                <button type="button" onclick="aud_play_pause()">Play/Pause</button>
+                     <script>
+                       function aud_play_pause() {
+                         var myAudio = document.getElementById("myAudio");
+                          if (myAudio.paused) {
+                       myAudio.play();
+                         } else {
+                         myAudio.pause();
+                         }
+                      }
+                    </script>
+        <!-- achtergrond muziek -->
                 <div class="banner">
                     <a href="index.php"><img class="hetlogo" src="FOTO/bannerfoto.png" alt="Logo"/></a>
 
