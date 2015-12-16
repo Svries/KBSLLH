@@ -23,10 +23,10 @@ $query = $con->prepare("SELECT * FROM evenement");
                    <h2>Bekijk hier de aankomende markten</h2>
                    <table class="agenda">
                 <tr>
-                    <th>evenement</th>
+                    <th>Evenement</th>
                     <th>Datum</th>
                     <th>Locatie</th>
-                    <th>tijd</th>
+                    <th>Tijd</th>
                     <th>Omschrijving</th>
                 </tr>
                 <?php

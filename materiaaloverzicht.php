@@ -13,7 +13,8 @@ if (isset($_GET["naam"])) {
     $naam = $_GET["naam"];
 }
 
-	if (isset($_POST["toevoegen"])) {
+	if ( (isset($_POST["toevoegen"]))
+    and (!empty($_POST["naam"]))) {
 	    // op toevoegen geklikt, nummer bestaat en nummer is niet leeg
 	    $query = $con->prepare("INSERT INTO materiaal(naam) VALUES(?)");
 	    $query->execute(array($_POST["naam"]));
@@ -54,7 +55,12 @@ if (isset($_GET["naam"])) {
                 ?>
                 <tr>
                     <td></td>
-                    <td><input type="text" name="naam"></td>
+                    <td><input type="text" name="naam">
+                        <?php if ((isset($_POST["toevoegen"])) 
+                        and (empty($_POST["naam"])) ) 
+                        {echo "U moet een naam opgeven";
+                        } ?>
+                    </td>
                     <td class="breed"><input type="submit" name="toevoegen" value="Toevoegen"></td>
                     <td></td>
                 </tr>

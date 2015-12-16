@@ -69,14 +69,15 @@ function showHide(shID) {
    /* This CSS is used for the Show/Hide functionality. */
    .more {
       display: none; 
-      background-color: lightgrey; 
+      background: url("FOTO/oldparchment.jpg");
       margin-left: -150px;
       margin-right: -150px;
       margin-top:-10px;
       padding: 10px;
       z-index: 100;
-      border: 1px solid black;
-      border-radius: 10px;
+      border: 2px solid black;
+      box-shadow: 1px 1px;
+      border-radius: 5px 5px 15px 15px;
       text-align: left;
     }
     .more p {
@@ -134,11 +135,11 @@ function showHide(shID) {
           <div class="persoregel">
             <div class="left">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">"naam"</a></h3>
                             <a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">
                                 <div id="example" class="more">
-                                    <h3 style=> Hans Kazan</h3>
-                                        <p>FDSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                                    <h3 style=>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             </a>
@@ -146,11 +147,11 @@ function showHide(shID) {
 
             <div class="center">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example2-show" class="showLink" onclick="showHide('example2');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example2-show" class="showLink" onclick="showHide('example2');return false;">"naam"</a></h3>
                             <a href="#" id="example2-hide" class="hideLink" onclick="showHide('example2');return false;">
                                 <div id="example2" class="more">
-                                    <h3> Hans Kazan</h3>
-                                        <p>AAPNOOTMIES</p>
+                                    <h3>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             </a>
@@ -158,11 +159,11 @@ function showHide(shID) {
 
             <div class="right">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example3-show" class="showLink" onclick="showHide('example3');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example3-show" class="showLink" onclick="showHide('example3');return false;">"naam"</a></h3>
                             <a href="#" id="example3-hide" class="hideLink" onclick="showHide('example3');return false;">
                                 <div id="example3" class="more">
-                                    <h3> Hans Kazan</h3>
-                                        <p>MIESNOOTAAP</p>
+                                    <h3>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             
@@ -175,11 +176,11 @@ function showHide(shID) {
           <div class="persoregel">
             <div class="left">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example4-show" class="showLink" onclick="showHide('example4');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example4-show" class="showLink" onclick="showHide('example4');return false;">"naam"</a></h3>
                             <a href="#" id="example4-hide" class="hideLink" onclick="showHide('example4');return false;">
                                 <div id="example4" class="more">
-                                    <h3 style=> Hans Kazan</h3>
-                                        <p>FDSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                                    <h3 style=>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             </a>
@@ -187,11 +188,11 @@ function showHide(shID) {
 
             <div class="center">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example5-show" class="showLink" onclick="showHide('example5');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example5-show" class="showLink" onclick="showHide('example5');return false;">"naam"</a></h3>
                             <a href="#" id="example5-hide" class="hideLink" onclick="showHide('example5');return false;">
                                 <div id="example5" class="more">
-                                    <h3> Hans Kazan</h3>
-                                        <p>AAPNOOTMIES</p>
+                                    <h3>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             </a>
@@ -199,11 +200,11 @@ function showHide(shID) {
 
             <div class="right">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example6-show" class="showLink" onclick="showHide('example6');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example6-show" class="showLink" onclick="showHide('example6');return false;">"naam"</a></h3>
                             <a href="#" id="example6-hide" class="hideLink" onclick="showHide('example6');return false;">
                                 <div id="example6" class="more">
-                                    <h3> Hans Kazan</h3>
-                                        <p>MIESNOOTAAP</p>
+                                    <h3>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             
@@ -216,11 +217,11 @@ function showHide(shID) {
           <div class="persoregel">
             <div class="left">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example7-show" class="showLink" onclick="showHide('example7');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example7-show" class="showLink" onclick="showHide('example7');return false;">"naam"</a></h3>
                             <a href="#" id="example7-hide" class="hideLink" onclick="showHide('example7');return false;">
                                 <div id="example7" class="more">
-                                    <h3 style=> Hans Kazan</h3>
-                                        <p>FDSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                                    <h3 style=>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             </a>
@@ -228,11 +229,11 @@ function showHide(shID) {
 
             <div class="center">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example8-show" class="showLink" onclick="showHide('example8');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example8-show" class="showLink" onclick="showHide('example8');return false;">"naam"</a></h3>
                             <a href="#" id="example8-hide" class="hideLink" onclick="showHide('example8');return false;">
                                 <div id="example8" class="more">
-                                    <h3> Hans Kazan</h3>
-                                        <p>AAPNOOTMIES</p>
+                                    <h3>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             </a>
@@ -240,11 +241,11 @@ function showHide(shID) {
 
             <div class="right">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example9-show" class="showLink" onclick="showHide('example9');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example9-show" class="showLink" onclick="showHide('example9');return false;">"naam"</a></h3>
                             <a href="#" id="example9-hide" class="hideLink" onclick="showHide('example9');return false;">
                                 <div id="example9" class="more">
-                                    <h3> Hans Kazan</h3>
-                                        <p>MIESNOOTAAP</p>
+                                    <h3>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             
@@ -257,11 +258,11 @@ function showHide(shID) {
           <div class="persoregel">
             <div class="left">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example10-show" class="showLink" onclick="showHide('example10');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example10-show" class="showLink" onclick="showHide('example10');return false;">"naam"</a></h3>
                             <a href="#" id="example10-hide" class="hideLink" onclick="showHide('example10');return false;">
                                 <div id="example10" class="more">
-                                    <h3 style=> Hans Kazan</h3>
-                                        <p>FDSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                                    <h3 style=>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             </a>
@@ -269,11 +270,11 @@ function showHide(shID) {
 
             <div class="center">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example11-show" class="showLink" onclick="showHide('example11');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example11-show" class="showLink" onclick="showHide('example11');return false;">"naam"</a></h3>
                             <a href="#" id="example11-hide" class="hideLink" onclick="showHide('example11');return false;">
                                 <div id="example11" class="more">
-                                    <h3> Hans Kazan</h3>
-                                        <p>AAPNOOTMIES</p>
+                                    <h3>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             </a>
@@ -281,11 +282,11 @@ function showHide(shID) {
 
             <div class="right">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example12-show" class="showLink" onclick="showHide('example12');return false;">Hans Kazan</a></h3>
+                    <h3><a href="#" id="example12-show" class="showLink" onclick="showHide('example12');return false;">"naam"</a></h3>
                             <a href="#" id="example12-hide" class="hideLink" onclick="showHide('example12');return false;">
                                 <div id="example12" class="more">
-                                    <h3> Hans Kazan</h3>
-                                        <p>MIESNOOTAAP</p>
+                                    <h3>"naam"</h3>
+                                        <p>"verhaaltje"</p>
          
                                 </div>
                             

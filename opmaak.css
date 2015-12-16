@@ -278,28 +278,23 @@ img.personagefoto {
 =                                    =
 ====================================*/
 
-
-
-.tekstvak{
-    border-style: solid;
-    width: 300px;
-    height: 200px;
-    
-    margin: right 20px;
+.vakgeschiedenis {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
-
-
-
+.tekstvakgeschiedenis{
+    width: 600px;
+    height: 100%;
+    float: left;
+    position: block;
+    margin-right: 150px;
+    text-align: left;
+}
 
 .hardewijk{
-    border-style: solid;
-    position: inline-block;
-
-    
-    
-
-}
-.info{
-border-style: solid;
+    display: inline-block;
+    height: 100%;
+    float: right;
 }
