@@ -18,12 +18,17 @@ function showHide(shID) {
 </script>
 <style type="text/css">
    /* This CSS is for the small text at the top. */
-    .infospeelpagina {
+   .infospeelpagina {
       width: 100%;
       border-bottom: 1px solid black;
       margin-bottom: 25px;
       box-shadow: 0px 2px;
-    }
+}
+
+   a.contactlink {
+    text-decoration: none;
+    color:red;
+   }
 
    /* This CSS is just for presentational purposes. */
    
@@ -32,8 +37,10 @@ function showHide(shID) {
       margin-left: 100px;
       width: 150px;
       height: 200px;
-      background-color: darkgrey;
+      background: url("FOTO/vlagharderwijk2.jpg") no-repeat center center;
       float: left;
+      border: 3px solid darkblue;
+      border-radius:5px 5px 35px 35px;
   }
 
    .center {
@@ -41,7 +48,9 @@ function showHide(shID) {
       width: 150px;
       height: 200px;
       margin: 0 auto;
-      background-color: darkgrey;
+      background: url("FOTO/vlagharderwijk2.jpg") no-repeat center center;
+      border: 3px solid darkblue;
+      border-radius:5px 5px 35px 35px;
       display: inline-block;
   }
 
@@ -50,7 +59,9 @@ function showHide(shID) {
       padding:10px;
       width: 150px;
       height: 200px;
-      background-color: darkgrey;
+      background: url("FOTO/vlagharderwijk2.jpg") no-repeat center center;
+      border: 3px solid darkblue;
+      border-radius:5px 5px 35px 35px;
       float: right; 
 
   }
@@ -61,6 +72,7 @@ function showHide(shID) {
       background-color: lightgrey; 
       margin-left: -150px;
       margin-right: -150px;
+      margin-top:-10px;
       padding: 10px;
       z-index: 100;
       border: 1px solid black;
@@ -108,8 +120,15 @@ function showHide(shID) {
                     in het spelen met elkaar en met het publiek. Na een eerste kennismaking, loop je mee met een mentor en na een bepaalde periode bezien we samen 
                     of we de goed keuzes gemaakt hebben. </br></br>
 
-                    We verwelkomen iedereen: Oud en vooral ook jong. Neem contact met ons op via het telefoonnummer 06 405 78 385 of mail: levendehistorie@hotmail.com
+                    We verwelkomen iedereen: Oud en vooral ook jong. Neem contact met ons op via het telefoonnummer 06 405 78 385 of mail: <a class="contactlink" href="http://localhost:8080/KBSLLH/Contact.php">levendehistorie@hotmail.com</a>
               </p>
+          </div>
+          <div class="infospeelpagina">
+            <p>
+            <form>
+              <input type="submit" value="Speler aanpassen">
+            </form>
+          </p>
           </div>
 <!--- REGEL1 -->          
           <div class="persoregel">

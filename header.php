@@ -9,16 +9,17 @@
             <link href="slideshow.css" rel="stylesheet" type="text/css"/>
          </head>
             <body>
+
                 <div class="banner">
-                    <img class="hetlogo" src="FOTO/bannerfoto.jpg" alt="Logo"/>
+                    <a href="index.php"><img class="hetlogo" src="FOTO/bannerfoto.png" alt="Logo"/></a>
 
                 
 
                 <div id="slider-container1">
                  <div class="wn_images"><ul>
-                    <li><a href="#"><img class="sliderfoto" src="FOTO/Groepsfoto_2012.JPG" alt="Nature"/></a></li>
-                    <li><a href="#"><img class="sliderfoto" src="FOTO/image-17.jpg" alt="Explore"/></a></li>
-                    <li><a href="#"><img class="sliderfoto" src="FOTO/image-49.jpg" alt="Church"/></a></li>
+                    <li><a href="index.php"><img class="sliderfoto" src="FOTO/Groepsfoto_2012.JPG" alt="Nature"/></a></li>
+                    <li><a href="index.php"><img class="sliderfoto" src="FOTO/image-17.jpg" alt="Explore"/></a></li>
+                    <li><a href="index.php"><img class="sliderfoto" src="FOTO/image-49.jpg" alt="Church"/></a></li>
                 </ul>
                 </div>
            </div>
