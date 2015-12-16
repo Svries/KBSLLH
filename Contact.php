@@ -117,7 +117,7 @@
  
         echo "De gegevens die ingvuld zijn kloppen niet, ";
  
-        echo "De volgende dingen kloppen niet.<br /><br />";
+        echo "de volgende dingen kloppen niet.<br /><br />";
  
         echo $error."<br /><br />";
  

@@ -50,7 +50,7 @@
                     </ul>
 
                     <ul>
-                        <li><a href="info.php">Geschiedenis</a></li>                                
+                        <li><a href="Geschiedenis.php">Geschiedenis</a></li>                                
                             <ul>
                                 <li><a href="">Evenement 1</a></li>
                                 <li><a href="">Evenement 2</a></li>
