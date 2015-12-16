@@ -58,7 +58,7 @@ $query = $con->prepare("SELECT * FROM evenement");
                    <form method="post" action="eventmaken.php">
                     naam evenement
                     <br>
-                        <input type="text" name="naam" placeholder="naam" value="<?php echo $naam;?>">
+                        <input type="text" name="naam" placeholder="naam">
                         <?php if ((isset($_POST["Event_aanmaken"])) 
                         and (empty($_POST["naam"])) ) 
                         {echo "U moet een naam opgeven";

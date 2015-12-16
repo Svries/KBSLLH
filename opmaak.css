@@ -6,9 +6,15 @@
 * {
     font-family: 'Macondo';
 }
+
+body {
+    background: url("FOTO/Vischpoort.jpg") no-repeat center center fixed;
+}
+
 .banner {
     height: 380px;
     margin: 0px 200px 0px 200px;
+    background-color: transparent;
 }
 
 .nav {
@@ -69,7 +75,7 @@
 }
 
 .info {
-    background-color: grey;
+    background: url("FOTO/oldparchment.png");
     padding: 10px;
     margin: 10px 200px 0px 200px;
     height: auto;
@@ -118,6 +124,7 @@ img.personagefoto {
     margin: 0px;
     width: 150px;
     z-index: 11;
+    border: 2px solid darkblue;
 }
 
 .persoregel {
@@ -129,6 +136,10 @@ img.personagefoto {
     z-index: 10;
     padding-bottom: 100px;
     display: static;
+}
+
+.persoregel h3{
+    margin-top: 5px;
 }
 /*====================================
 =                                    =
