@@ -2,6 +2,13 @@
 <html>
     <head>
 		<?php include 'head.php'; ?>
+
+    <!--[if IE]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+
     </head>
     <body>
         <header>
@@ -22,8 +29,8 @@
                     
                 </div> 
             
-                <div class='hardewijk'>  
-                    <img src="http://www.edward-wells.nl/catalogus/products_pictures/large_3/1952.jpg" width='300,5' hieght='50' >
+                <div class='hardewijk'>
+                    <a class="fancybox" rel="group" href="images/1952.jpg"><img src="/images/1952.jpg" width="300,5" height="223"></a>
                 </div>
             </div>
 
@@ -39,9 +46,25 @@
                 </div> 
             
                 <div class='hardewijk'>  
-                    <img src="http://www.edward-wells.nl/catalogus/products_pictures/large_3/1952.jpg" width='300,5' hieght='50' >
+                    <a class="fancybox" rel="group" href="images/1952.jpg"><img src="/images/1952.jpg" width="300,5" height="223"></a>
                 </div>
             </div>
-        </div>           
+        </div>
+
+
+
+
+        <!-- Add jQuery library -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <!-- Add fancyBox -->
+        <link rel="stylesheet" href="source/jquery.fancybox.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="source/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".fancybox").fancybox();
+            });
+        </script>
+
+
     </body>
 </html>
