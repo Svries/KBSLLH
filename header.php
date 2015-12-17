@@ -44,6 +44,7 @@
         </div>
             
         <div class="nav">
+            <img class="navafbeelding" src="FOTO/Navigatie.png">
                 <div class="navmenu">
                     <ul>
                         <li><a href="index.php">Hoofdpagina</a></li>

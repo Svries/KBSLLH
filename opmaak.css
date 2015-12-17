@@ -13,19 +13,23 @@ body {
 
 .banner {
     height: 380px;
-    margin: 0px 200px 0px 200px;
+    margin: 0px 200px -50px 200px;
     background-color: transparent;
+    overflow:auto;
 }
 
 .nav {
-    background-color: grey;
-    margin: 0px 200px 0px 200px;
+    margin: 0px 100px 0px 100px;
     padding: 0px 25px 0px 25px;
-    height: 40px;
+}
+
+.navafbeelding {
+    width: 100%;
+    height: 120px;
 }
 
 .navmenu {
-    margin: 0px;
+    margin: -75px 0px 0px 100px;
     padding: 0px;
 }
 
@@ -40,22 +44,23 @@ body {
     list-style: none;
     float: left;
     position: relative;
-    background: grey;
+    background: transparent;
 }
 
 .navmenu li:hover {
-    background-color: lightgrey;
+    background: url("FOTO/oldparchment.jpg") no-repeat center center;
     width: 121px;
+    border:1px solid black;
 }
 
 .navmenu ul li a {
     text-align: center;
-    padding: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
     text-decoration: none;
-    height: 30px;
+    height: 20px;
     width: 120px;
     display: block;
-    color:black;
+    color:white;
 }
 
 .navmenu ul ul {
@@ -65,7 +70,7 @@ body {
 }
 
 .navmenu ul ul li {
-    margin: 1px 0px 1px 0px;
+    margin: 0px 0px 0px 0px;
     background-color: blue;
 }
 
@@ -77,7 +82,8 @@ body {
 .info {
     background: url("FOTO/oldparchment.png");
     padding: 10px;
-    margin: 10px 200px 0px 200px;
+    margin: 50px 200px 10px 200px;
+    position: relative;
     height: auto;
 }
 
@@ -91,26 +97,26 @@ body {
 
 
 p.menu:hover {
-    background-color: lightgrey;
+    background-color: transparent;
 }
 
 p.menu2 {
-    font-family: Arial;
     text-align: center;
-    background-color: grey;
+    background-color: transparent;
     float: right;
     width: 100px;
     height: 30px;
-    margin: 0px 10px 0px 10px;
-    padding: 10px 0px 0px 0px;
+    margin: 0px 100px 0px 10px;
+    padding: 0px 0px 0px 0px;
+    position: relative;
 }
 
 p.menu2:hover {
-    background-color: lightgrey;
+    background-color: transparent;
 }
 
-.menu2 a {
-      color:black;
+p.menu2 a {
+      color:white;
 }
 
 /*====================================
