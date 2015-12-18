@@ -10,7 +10,18 @@
 
         <div class="info">
             <h2> Contact </h2>
-           
+            <h2> Contact </h2>
+           <div class="p5">
+            <p>Heb je in interesse in Levende Historie Harderwijk? Is je belangstelling gewekt, 
+            om als speler actief te willen zijn? Ga naar de <a href="Personages.php">spelerpagina</a>.
+            <br><br>Heb je interesse om onze groep eens te zien spelen,om met ons in gesprek te gaan, om de groep eens bij je eigen evenement uit te nodigen? 
+            Ga naar de <a href="Agenda.php">evenementenpagina</a>.
+            <br><br>Heb je andere vragen of interesses,voor contact vul het formulier in.</p>
+
+            </div>
+            
+
+
             <form name="contactform" method="post" action="">
  
 <table width="450px">
