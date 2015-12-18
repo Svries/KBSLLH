@@ -18,21 +18,19 @@ else
 
         /*** bind de parameters ***/
         $stmt->bindParam(':id', $_SESSION['user_id'], PDO::PARAM_INT);
-
         /*** Voert het hiervoor bereide statement uit***/
         $stmt->execute();
 
         /*** check for a result ***/
-        $email = $stmt->fetchColumn();
-
+        $spelersnaam = $stmt->fetchColumn();
         /*** Als er nee uitkomt is er iets fout gegaan ***/
-        if($email == false)
+        if($spelersnaam == false)
         {
             $message = 'Access Error';
         }
         else
         {
-            $message = 'Welkom '.$email;
+            $message = 'Welkom '.$spelersnaam;
         }
     }
     catch (Exception $e)
@@ -54,6 +52,7 @@ else
 </header>
 <div class="info">
     <?php echo $message; ?><br>
+
     <a href="spelersoverzicht.php">Spelersoverzicht</a> <br>
     <a href="materiaaloverzicht.php">Materiaaloverzicht</a> <br> 
     <a href="materiaalperspeler.php">Materiaal per speler</a>  <br>

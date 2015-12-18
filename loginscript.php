@@ -32,8 +32,6 @@ else {
         $stmt->bindParam('email', $email, PDO::PARAM_STR);
         $stmt->bindParam('password', $password, PDO::PARAM_STR);
 
-
-
         /*** Voert het hierboven gemaakte statement uit ***/
         $stmt->execute();
 
