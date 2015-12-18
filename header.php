@@ -11,7 +11,7 @@
             <body>
  <!-- achtergrond muziek -->
                 <audio id="myAudio" loop> <!-- autoplay = "autoplay" -->
-                <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4" type='audio/mp4'>
+                <source src="FOTO/Rick_Astley.MP3" type='audio/mp3'>
                 <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga" type='audio/ogg; codecs=vorbis'>
                     Your user agent does not support the HTML5 Audio element.
                 </audio>
