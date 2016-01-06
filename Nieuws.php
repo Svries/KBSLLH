@@ -14,44 +14,42 @@
                                 <a href = "Nieuws.php?gb=true">Nieuw bericht</a>
                                 <hr>
                                 <?php
+                                require_once("connection.php");
                                 if (isset($_GET['gb'])){
                                     echo"
                                     <form action = '' method = 'POST'>
                                     Titel:<br>
-                                    <input type= 'text' name = 'titel'>
+                                    <input type= 'text' name = 'titel'><br>
                                     Bericht:<br>
-                                    <textarea cols= '40' rows= '3' name= 'nieuws'></textarea><br>
+                                    <textarea cols= '40' rows= '3' name= 'bericht'></textarea><br>
                                     <input type= 'submit' name= 'submitBtn'>
                                     </form>
                                     ";
                                     if(isset($_POST['submitBtn'])){
-                                        //varibelen
+                                        //variabelen definieren
                                         $titel = $_POST['titel'];
-                                        $nieuws = $_POST['nieuws'];
-                                        $date = date("Y-m-d");
-                                        include("nieuwsdb.php");
-                                        //sql
-                                        $sql = "INSERT INTO entries(titel, nieuws, date) VALUES ('$titel', '$nieuws', '$date')";
-                                        $stmt = $db->query($sql);
+                                        $bericht = $_POST['bericht'];
+                                        
+                                        //sql voor plaatsen
+                                        $sql = "INSERT INTO nieuws(titel, bericht) VALUES ('$titel', '$bericht')";
+                                        $stmt = $con->query($sql);
                                         $stmt->execute();
                                         echo "Uw nieuwsbericht is geplaatst.";
                                     }
                                     }else{
-                                        //database betrekken
-                                        include("nieuwsdb.php");
                                         //SQL
-                                        $sql = "SELECT * FROM entries ORDER BY id DESC";
-                                        $stmt = $db->Query ($sql);
+                                        $sql = "SELECT * FROM nieuws ORDER BY datum DESC";
+                                        $stmt = $con->Query ($sql);
                                         $stmt->Execute();
                                         $stmt->setFetchMode(PDO::FETCH_ASSOC);
                                         if($stmt->rowCount() > 0){
                                             while($row = $stmt->fetch()){
                                                 echo "
                                                 <b>Titel: </b>".$row['titel']."<br>
-                                                <b>Date: </b>".$row['date']."<br>
+                                                <b>Date: </b>".$row['datum']."<br>
                                                 <b>Bericht:</b><br>
                                                 <p>
-                                                ".$row['nieuws']."
+                                                ".$row['bericht']."
                                                 </p>
                                                 <hr>
                                                 ";
