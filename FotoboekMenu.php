@@ -37,10 +37,10 @@
             <section>
                 <div class="gallery">
                     <ul>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
+                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php?page=1"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
+                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php?page=2"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
+                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php?page=3"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
+                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php?page=4"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
                         
                         <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
                         <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
