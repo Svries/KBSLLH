@@ -10,10 +10,13 @@
         </header>
         <div class="info">
         <?php
+        //verbinding met database
         require 'connection.php';
+
+        //kijkt of het id wel mee is gekomen met de link
         if (isset($_GET["id"]) && $_GET["id"] != "") {
             $id = $_GET["id"];
-
+        //De query welke het evenement uit de database verwijderd
             if (isset($_GET['bevestiging'])) {
                 try {
                     $stmt = $con->prepare("DELETE FROM evenement WHERE id=?");
@@ -27,7 +30,9 @@
                     $melding = "Er is iets misgegaan";
                 }
                 $con = NULL;
-            } else {
+            } 
+        //vraagt gebruiker of hij zeker wil dat hij het item wil verwijderen
+            else {
                 print("Weet je zeker dat je Item " . $id . " wilt verwijderen?<br><br>");
                 print("<form method=\"get\" action=\"eventverwijder.php\" >");
                 print("<input type=\"submit\" name=\"bevestiging\" value=\"Verwijder\">");

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 require 'connection.php';
-
+//kijkt of alles wel is ingevuld voordat het naar de database wordt gestuurd
     if( (isset($_POST["inschrijven"]))
     and (!empty($_POST["eindtijd"]))
     and (!empty($_POST["Naam"]))
