@@ -12,10 +12,10 @@
             <h2> Contact </h2>
            <div class="p5">
             <p>Heb je in interesse in Levende Historie Harderwijk? Is je belangstelling gewekt, 
-            om als speler actief te willen zijn? Ga naar de <a href="Personages.php">spelerpagina</a>.
+            om als speler actief te willen zijn? Kijk dan eens rond op de<a href="Personages.php"> spelerpagina </a>om te zien wie er spelen.
             <br><br>Heb je interesse om onze groep eens te zien spelen,om met ons in gesprek te gaan, om de groep eens bij je eigen evenement uit te nodigen? 
-            Ga naar de <a href="Agenda.php">evenementenpagina</a>.
-            <br><br>Heb je andere vragen of interesses,voor contact vul het formulier in.</p>
+            Ga dan naar de <a href="Agenda.php">evenementenpagina</a> om te zien wanneer er een evenement plaats vindt.
+            <br><br>Heb je andere vragen of interesses, voor contact vul het formulier in.</p>
 
             </div>
             
