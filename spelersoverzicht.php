@@ -69,6 +69,12 @@ $email = "";
 if (isset($_GET["email"])) {
     $email = $_GET["email"];
 }
+
+$foto = "";
+if (isset ($_GET["foto"])) {
+    $foto = $_GET["foto"];
+}
+
 	if (isset($_POST["toevoegen"])) {
 	    // op toevoegen geklikt, nummer bestaat en nummer is niet leeg
 	    $query = $con->prepare("INSERT INTO gebruiker(naam, achternaam, spelersnaam, email) VALUES(?,?,?,?)");
@@ -81,6 +87,10 @@ if (isset($_GET["email"])) {
 	$con = NULL;
 
 ?>
+
+
+
+
 <html>
     <head>
      <?php include 'head.php';?>
@@ -88,6 +98,7 @@ if (isset($_GET["email"])) {
     <body>
         <header>
             <?php include 'header.php'; ?>
+
         </header>
         
         <form method="post" action="spelersoverzicht.php">
@@ -99,6 +110,7 @@ if (isset($_GET["email"])) {
                     <th>Achternaam</th>
                     <th>Spelersnaam</th>
                     <th>Email</th>
+                    <th>Foto</th>
                     <th>Bewerken</th>
                     <th>Verwijderen</th>
                 </tr>
@@ -110,6 +122,7 @@ if (isset($_GET["email"])) {
                     print("\n\t\t<td>" . $gebruiker["achternaam"] . "</td>");
                     print("\n\t\t<td>" . $gebruiker["spelersnaam"] . "</td>");
                     print("\n\t\t<td>" . $gebruiker["email"] . "</td>");
+                    print("\n\t\t<td>" . "<img src='" . $gebruiker["foto"] . "' style='width:150px;'>" . "</td>");
                     print("<td><a href=\"spelerbewerk.php?id=" . $gebruiker["id"] . "\">Bewerk</a></td>");
                     print("<td><a href=\"spelerverwijder.php?id=" . $gebruiker["id"] . "\">Verwijder</a></td>");
                     print("\n\t</tr>");
@@ -122,6 +135,7 @@ if (isset($_GET["email"])) {
                     <td><input type="text" name="spelersnaam"></td>
                     <td><input type="text" name="email"></td>
                     <td class="breed"><input type="submit" name="toevoegen" value="Toevoegen"></td>
+                    <td></td>
                     <td></td>
                 </tr>
             </table>

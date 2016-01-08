@@ -82,8 +82,11 @@ body {
 .info {
     background: url("FOTO/oldparchment.png");
     padding: 10px;
-    margin: 50px 200px 10px 200px;
+    margin: 50px 250px 10px 250px;
     position: relative;
+    border-left: 1px solid ;
+    border-right: 1px solid ;
+    border-radius: 5px;
     height: auto;
 }
 
@@ -134,19 +137,50 @@ img.personagefoto {
 }
 
 .persoregel {
-    width: 100%;
-    height: 300px;
-    border: 0px solid transparent;
-    position: relative;
-    text-align: center;
+    width: 49%;
+    height: 100%;
     z-index: 10;
-    padding-bottom: 100px;
-    display: static;
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid black;
+}
+
+.persoregel2 {
+    width: 65%;
+    height: 100%;
+    z-index: 10;
+    display: inline-block;
+    margin-right: 8px;
+    float: right; 
 }
 
 .persoregel h3{
     margin-top: 5px;
 }
+
+.infospeelpagina {
+    width: 100%;
+    border-bottom: 4px solid black;
+    margin-bottom: 25px;    
+}
+
+a.contactlink {
+    text-decoration: none;
+    color:red;
+}
+   
+.left {
+    padding:10px;
+    width: 150px;
+    height: 225px;
+    float: left;
+    background: url("FOTO/vlagharderwijk2.jpg") no-repeat center center;
+    border: 3px solid darkblue;
+    display: inherit;
+    text-align: center;
+}
+
 /*====================================
 =                                    =
 =              AGENDA                =

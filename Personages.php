@@ -16,90 +16,16 @@ function showHide(shID) {
    }
 }
 </script>
-<style type="text/css">
-   /* This CSS is for the small text at the top. */
-   .infospeelpagina {
-      width: 100%;
-      border-bottom: 1px solid black;
-      margin-bottom: 25px;
-      box-shadow: 0px 2px;
-}
+<?php
+require 'connection.php';
 
-   a.contactlink {
-    text-decoration: none;
-    color:red;
-   }
+  $query = $con->prepare("SELECT * FROM gebruiker");
+  $query->execute();
+  $gebruikers = $query->fetchAll();
+  $con = NULL;
 
-   /* This CSS is just for presentational purposes. */
-   
-   .left {
-      padding:10px;
-      margin-left: 100px;
-      width: 150px;
-      height: 200px;
-      background: url("FOTO/vlagharderwijk2.jpg") no-repeat center center;
-      float: left;
-      border: 3px solid darkblue;
-      border-radius:5px 5px 35px 35px;
-  }
+?>
 
-   .center {
-      padding:10px;
-      width: 150px;
-      height: 200px;
-      margin: 0 auto;
-      background: url("FOTO/vlagharderwijk2.jpg") no-repeat center center;
-      border: 3px solid darkblue;
-      border-radius:5px 5px 35px 35px;
-      display: inline-block;
-  }
-
-   .right {
-      margin-right: 100px;
-      padding:10px;
-      width: 150px;
-      height: 200px;
-      background: url("FOTO/vlagharderwijk2.jpg") no-repeat center center;
-      border: 3px solid darkblue;
-      border-radius:5px 5px 35px 35px;
-      float: right; 
-
-  }
-
-   /* This CSS is used for the Show/Hide functionality. */
-   .more {
-      display: none; 
-      background: url("FOTO/oldparchment.jpg");
-      margin-left: -150px;
-      margin-right: -150px;
-      margin-top:-10px;
-      padding: 10px;
-      z-index: 100;
-      border: 2px solid black;
-      box-shadow: 1px 1px;
-      border-radius: 5px 5px 15px 15px;
-      text-align: left;
-    }
-    .more p {
-        width: 100%;
-        padding-bottom: 10px;
-        word-wrap: break-word;
-        font-size: 12px;        
-    }
-    .moreright p {
-        width: 100%;
-        padding-bottom: 10px;
-        word-wrap: break-word;
-        font-size: 12px;        
-    }
-   a.showLink, a.hideLink {
-      text-decoration: none;
-      color: black;
-      text-align: none;
-      }
-   a.hideLink {
-      background: transparent url(up.gif) no-repeat left; }
-</style>
     </head>
     
     <body> 
@@ -124,18 +50,43 @@ function showHide(shID) {
                     We verwelkomen iedereen: Oud en vooral ook jong. Neem contact met ons op via het telefoonnummer 06 405 78 385 of mail: <a class="contactlink" href="http://localhost:8080/KBSLLH/Contact.php">levendehistorie@hotmail.com</a>
               </p>
           </div>
-          <div class="infospeelpagina">
-            <p>
-            <form>
-              <input type="submit" value="Speler aanpassen">
-            </form>
-          </p>
+
+            <?php
+            foreach ($gebruikers as $gebruiker){
+              if ($gebruiker["id"] >= 50 && $gebruiker ["id"] < 60){
+              print ("<div class='persoregel'>");
+              print ("<div class='left'>");
+              print ("<img class='personagefoto' src='" . $gebruiker["foto"] . "'>");
+              print ("<h3>" . $gebruiker["spelersnaam"] . "</h3>");
+              print ("</div>");
+              print ("<div class='persoregel2'>");
+              print ("<p>" . $gebruiker["spelersverhaal"] . "</p>");
+              print ("</div>");
+              print ("</div>");
+              }
+            }
+              ?>
+
+
           </div>
+        </div>
+    </body>
+</html>
+
 <!--- REGEL1 -->          
+<!--
           <div class="persoregel">
             <div class="left">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">"naam"</a></h3>
+                    <?php
+                    foreach ($gebruikers as $gebruiker) {  
+                    ?>
+                    <h3><a href='#' id='example-show' class='showLink' onclick='showHide("example");return false;'><?php echo $gebruiker["naam"]?></a></h3>
+                    
+                    <?php  
+                   // print ("<h3><a href='#' id='example-show' class='showLink' onclick='showHide(\'example\');return false;'>" . ($gebruiker["naam"]) . "</a></h3>");
+                  }
+                    ?>
                             <a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">
                                 <div id="example" class="more">
                                     <h3 style=>"naam"</h3>
@@ -147,7 +98,9 @@ function showHide(shID) {
 
             <div class="center">
                 <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example2-show" class="showLink" onclick="showHide('example2');return false;">"naam"</a></h3>
+               
+                    <h3><a href='#' id='example2-show' class='showLink' onclick='showHide("example2");return false;'><?php echo $gebruikers["naam"]?></a></h3>
+
                             <a href="#" id="example2-hide" class="hideLink" onclick="showHide('example2');return false;">
                                 <div id="example2" class="more">
                                     <h3>"naam"</h3>
@@ -171,7 +124,7 @@ function showHide(shID) {
             </div>
           </div>
 
-<!--- REGEL2 -->
+
 
           <div class="persoregel">
             <div class="left">
@@ -212,7 +165,7 @@ function showHide(shID) {
             </div>
           </div>
 
-<!--- REGEL3 -->
+
 
           <div class="persoregel">
             <div class="left">
@@ -252,49 +205,6 @@ function showHide(shID) {
                             </a>
             </div>
           </div>
-
+---->
 <!--- REGEL4 -->
 
-          <div class="persoregel">
-            <div class="left">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example10-show" class="showLink" onclick="showHide('example10');return false;">"naam"</a></h3>
-                            <a href="#" id="example10-hide" class="hideLink" onclick="showHide('example10');return false;">
-                                <div id="example10" class="more">
-                                    <h3 style=>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            </a>
-            </div>
-
-            <div class="center">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example11-show" class="showLink" onclick="showHide('example11');return false;">"naam"</a></h3>
-                            <a href="#" id="example11-hide" class="hideLink" onclick="showHide('example11');return false;">
-                                <div id="example11" class="more">
-                                    <h3>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            </a>
-            </div>
-
-            <div class="right">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example12-show" class="showLink" onclick="showHide('example12');return false;">"naam"</a></h3>
-                            <a href="#" id="example12-hide" class="hideLink" onclick="showHide('example12');return false;">
-                                <div id="example12" class="more">
-                                    <h3>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            
-                            </a>
-            </div>
-          </div>
-
-
-        </div>
-    </body>
-</html>
