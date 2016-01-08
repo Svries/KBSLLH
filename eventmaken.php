@@ -12,7 +12,7 @@
         $query = $con->prepare("INSERT INTO evenement(Datum, begintijd, plaats, adres, naam, omschrijving, eindtijd) VALUES(?,?,?,?,?,?,?)");
         $query->execute(array($_POST["datum"], $_POST["begintijd"], $_POST["plaats"], $_POST["adres"], $_POST["naam"], $_POST["omschrijving"], $_POST["eindtijd"]));
     }
-$query = $con->prepare("SELECT * FROM evenement");
+    $query = $con->prepare("SELECT * FROM evenement");
     $query->execute();
     $agenda = $query->fetchAll();
     $con = NULL;
