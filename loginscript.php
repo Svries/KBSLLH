@@ -18,8 +18,12 @@ else {
     /*** Variabelen aanmaken en password hashen ***/
     $email = $_POST['email'];
     $password = $_POST['password'];
+    
+    $salt = "498#2D83B631%3800EBD!801600D*7E3CC13";
 
-    $password = sha1($password);
+    $password = hash('sha1', $salt.$password);
+    
+
     try
     {
         require_once 'connection.php';

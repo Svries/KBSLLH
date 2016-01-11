@@ -237,7 +237,7 @@ a.contactlink {
 }
 
 .flat-table th {
-    background-color: rgb(112, 196, 105);
+    background-color: #AC9253;
     color: white;
     font-weight: normal;
     padding: 20px 30px;
@@ -257,7 +257,7 @@ a.contactlink {
 }
 .flat-table a {
     text-decoration: none;  
-    color: rgb(112, 196, 105);
+    color: #AC9253;
 }
 
 /*====================================

@@ -22,6 +22,9 @@
 					<p>
 						<input type="submit" value="Login" />
 					</p>
+					<p>
+						<a href="forgot_password.php"> Wachtwoord vergeten? </a>
+					</p>
 				</fieldset>
 			</form>
         </div>
