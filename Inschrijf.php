@@ -11,7 +11,7 @@ require 'connection.php';
 	    $query->execute(array($_POST["evenement_id"], $_POST["Naam"], $_POST["begintijd"], $_POST["eindtijd"]));
 	}
 //eerste connectie database voor ophalen inschrijvingen
-    $query = $con->prepare("SELECT I.Naam, I.begintijd, I.eindtijd, E.naam, E.plaats from inschrijvenevenement I join evenement E on E.id=I.evenement_id");
+    $query = $con->prepare("SELECT I.id, I.Naam, I.begintijd, I.eindtijd, E.naam, E.plaats from inschrijvenevenement I join evenement E on E.id=I.evenement_id");
     $query->execute();
     $inschrijvingen = $query->fetchAll();
     $con = NULL;
@@ -139,14 +139,26 @@ else
         				<th style="width: 200px;">Begin Tijd</th>
         				<th style="width: 200px;">Eind Tijd</th>
                         <th style="width: 200px;">evenement</th>
+
+                    <!-- dit gedeelte achter admin panel -->
+                        <th style="width: 200px;">Bewerk</th>
+                        <th style="width: 200px;">Verwijder</th>
+                    <!-- dit gedeelte achter admin panel -->
+
         			</tr>
-        			<?php
+        		<?php
                 foreach ($inschrijvingen as $namen) {
                     print("\n\t<tr>");      
                     print("\n\t\t<td>" . $namen["Naam"] . "</td>");
                     print("\n\t\t<td>" . $namen["begintijd"] . "</td>");
                     print("\n\t\t<td>" . $namen["eindtijd"] . "</td>");
                     print("\n\t\t<td>" . $namen["naam"] . " in " . $namen["plaats"] . "</td>");
+
+                //dit gedeelte achter admin panel
+                    print("<td><a href=\"inschrijvingbewerk.php?id=" . $namen["id"] . "\">Bewerk</a></td>");
+                    print("<td><a href=\"inschrijvingverwijder.php?id=" . $namen["id"] . "\">Verwijder</a></td>");
+                //dit gedeelte achter admin panel
+
                     print("\n\t</tr>");
                 }
                 ?>
