@@ -1,30 +1,42 @@
 
 <?php
+session_start();
 $melding = "";
 require_once 'connection.php';
+if(!isset($_SESSION['user_id']))
+{
+    header('location: loginpage.php');
 
-if (isset($_GET["id"]) && $_GET["id"] != "") {
-    $id = $_GET["id"];
-    try {
-        if (isset($_GET["opslaan"])) {
-            $stmt = $con->prepare("UPDATE text SET bericht=? WHERE id=?");
-            $stmt->execute(array($_GET["bericht"], $_GET["id"]));
-            
-            $melding = "De gegevens zijn opgeslagen";
-        }
+} 
 
-        $stmt = $con->prepare("SELECT * FROM text WHERE id=?");
-        $stmt->execute(array($_GET["id"]));
-        $text = $stmt->fetch();
+if($_SESSION['user_type'] !== 'admin') 
+{
+    header('location: index.php');
 
-        $bericht = $text["bericht"];
-
-    } catch (PDOException $e) {
-        $melding = "Er is iets misgegaan";
-    }
-    $con = NULL;
 } else {
-    $melding = "Het id nummer ontbreekt";
+    if (isset($_GET["id"]) && $_GET["id"] != "") {
+        $id = $_GET["id"];
+        try {
+            if (isset($_GET["opslaan"])) {
+                $stmt = $con->prepare("UPDATE text SET bericht=? WHERE id=?");
+                $stmt->execute(array($_GET["bericht"], $_GET["id"]));
+                
+                $melding = "De gegevens zijn opgeslagen";
+            }
+
+            $stmt = $con->prepare("SELECT * FROM text WHERE id=?");
+            $stmt->execute(array($_GET["id"]));
+            $text = $stmt->fetch();
+
+            $bericht = $text["bericht"];
+
+        } catch (PDOException $e) {
+            $melding = "Er is iets misgegaan";
+        }
+        $con = NULL;
+    } else {
+        $melding = "Het id nummer ontbreekt";
+    }
 }
 ?>
 
@@ -40,13 +52,23 @@ if (isset($_GET["id"]) && $_GET["id"] != "") {
     
         <div class="info">
         <form method="get" action="artiekelbewerk.php">
-          <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-          <script>tinymce.init({ selector:'textarea' });</script>
+            <script language="javascript" type="text/javascript" src="tinymce\js\tinymce\tinymce.min.js"></script>
+            <script language="javascript" type="text/javascript">
+            tinyMCE.init({
+                
+                mode : "textareas",
+                  plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste imagetools"
+                    ]
+            });
+            </script>
                 <tr>
 
                 </tr>
                 <tr>
-                    <textarea name="bericht">
+                    <textarea name="bericht" rows="25">
                         <?php print($bericht); ?>
                     </textarea><br>
                     <input type="submit" name="opslaan" value="Opslaan"></td><br>

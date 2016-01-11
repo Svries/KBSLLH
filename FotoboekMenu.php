@@ -37,15 +37,22 @@
             <section>
                 <div class="gallery">
                     <ul>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
-                        <li><a title="EVENEMENT NAAM" href="Fotoboek.php"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li>
+                        <?php
+                        try {
+                        // pakt elk evenement uit de database met alle bijbehorende data
+                        $con = new PDO("mysql:host=localhost; dbname=lhh; port=3307", "root", "usbw");
+                         $stmt = $con->prepare("SELECT * from evenement");
+                            $stmt->execute();
+                            $albums = $stmt->fetchAll();
+                            foreach($albums as $album) { //voor elk evenement geneert hij een album pagina die de naam uit de database overneemt, doorlinkt naar de bijbehorende pagina en de goede coverafbeelding toewijst.
+                                print('<li><a title="'.$album["naam"].'" href="Fotoboek.php?page='.$album["id"].'"> <img src="'.$album["eventcover"].'" width="200" height="200" alt="dal"> </a></li>');
+                            }
+                            
+                        }
+                        catch( Exception $e) {
+                        }
+                        ?>
+                        <!-- <li><a title="EVENEMENT NAAM" href="Fotoboek.php?page=1"> <img src="images/tn/img8.jpg" width="200" height="200" alt="dal"> </a></li> -->
                     </ul>
                 </div>
             </section>
@@ -54,6 +61,7 @@
 
 
         </div>
+        
 
 
         <style type="text/css">
@@ -115,9 +123,6 @@
         .gallery img:hover {
             border:1px solid #fff;
         }
-
-
-
 
         </style>
     </body>

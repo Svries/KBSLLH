@@ -1,11 +1,11 @@
 <?php
 
-/*** begin the session ***/
+// begin de sessie
 session_start();
-
+// kijkt of er een sessie is, zoniet word je teruggestuurd naar de loginpagina
 if(!isset($_SESSION['user_id']))
 {
-    $message = 'Je moet ingelogd zijn om deze pagina kunnen te bekijken';
+    header ('location: loginpage.php');
 }
 else
 {
@@ -13,7 +13,7 @@ else
     {
         require_once 'connection.php';
         /*** Bereid de query voor ***/
-        $stmt = $con->prepare("SELECT spelersnaam FROM gebruiker 
+        $stmt = $con->prepare("SELECT * FROM gebruiker 
             WHERE id = :id");
 
         /*** bind de parameters ***/
@@ -22,7 +22,7 @@ else
         $stmt->execute();
 
         /*** check for a result ***/
-        $spelersnaam = $stmt->fetchColumn();
+        $spelersnaam = $stmt->fetchColumn(8);
         /*** Als er nee uitkomt is er iets fout gegaan ***/
         if($spelersnaam == false)
         {
@@ -32,6 +32,7 @@ else
         {
             $message = 'Welkom '.$spelersnaam;
         }
+
     }
     catch (Exception $e)
     {
@@ -39,7 +40,6 @@ else
         $message = 'We are unable to process your request. Please try again later"';
     }
 }
-
 ?>
 
 <html>
@@ -51,12 +51,17 @@ else
     <?php include 'header.php';?>  
 </header>
 <div class="info">
-    <?php echo $message; ?><br>
+    <?php 
+    echo $message . "<br>";  
 
-    <a href="spelersoverzicht.php">Spelersoverzicht</a> <br>
-    <a href="materiaaloverzicht.php">Materiaaloverzicht</a> <br> 
-    <a href="materiaalperspeler.php">Materiaal per speler</a>  <br>
-    <a href="inschrijf.php">Inschrijven evenementen</a>     
-</div>
+    if(isset($_SESSION['user_id'])){ 
+        if($_SESSION['user_type'] == "admin") {
+                echo "<a href=\"spelersoverzicht.php\">Spelersoverzicht</a><br>";
+                echo "<a href=\"materiaaloverzicht.php\">Materiaaloverzicht</a><br>";
+                echo "<a href=\"materiaalperspeler.php\">Materiaal per speler</a><br>";
+        }
+                echo "<a href=\"Inschrijf.php\">Inschrijven markt</a><br>";
+    }
+    ?>
 </body>
 </html>
