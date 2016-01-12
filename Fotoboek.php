@@ -47,7 +47,7 @@
                             $fotos = $stmt->fetchAll(); //Slaat resultaten op in een array
                         foreach($paginas as $pagina) {     // voert deze code uit voor elk evenement
                             foreach ($fotos as $foto) { //voert deze code uit voor elke foto in de fotoboek tabel waar het pagina nr gelijk is aan de evenementID
-                                print('<li><a class="fancybox" rel="group" href="'.$foto["url"].'" title="dal"><img src="'.$foto["url"].'" width="100" height="100" alt="afb"></a></li>');
+                                print('<li><a class="fancybox" rel="group" href="'.$foto["url"].'" ><img src="'.$foto["url"].'" width="100" height="100" alt="afb"></a></li>');
                                 }
                             }
                         }

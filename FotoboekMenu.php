@@ -21,7 +21,12 @@
     });
     })(jQuery);
     </script>     <!-- source: http://sammywinchester.org/post/71642614913/hi-marcie-i-was-wondering-is-there-anything -->
-
+    
+    <?php if (isset ( $_GET ['page'] )) { //zorgt ervoor; dat als er fotoboekmenu.php in de url staat, dat dit automatisch ?page=1 is
+        $page = $_GET ['page'];
+    } else {
+        $page = "1";
+    }?>
      
     </head>
     <body>
@@ -41,11 +46,16 @@
                         try {
                         // pakt elk evenement uit de database met alle bijbehorende data
                         $con = new PDO("mysql:host=localhost; dbname=lhh; port=3307", "root", "usbw");
-                         $stmt = $con->prepare("SELECT * from evenement");
+                        if($page == 1) { $min=1; $max=5;}               //new
+                        elseif($page ==2) { $min=6; $max=10;}           //new
+                         $stmt = $con->prepare("SELECT * from evenement where id between'".$min."' AND '".$max."'"); //new
                             $stmt->execute();
                             $albums = $stmt->fetchAll();
+                            $i = 0;                                     //new
+                            $albumsperpagina = 6;                       //new
                             foreach($albums as $album) { //voor elk evenement geneert hij een album pagina die de naam uit de database overneemt, doorlinkt naar de bijbehorende pagina en de goede coverafbeelding toewijst.
-                                print('<li><a title="'.$album["naam"].'" href="Fotoboek.php?page='.$album["id"].'"> <img src="'.$album["eventcover"].'" width="200" height="200" alt="dal"> </a></li>');
+                                print('<li><a title="'.$album["naam"].'" href="Fotoboek.php?page='.$album["id"].'"> <img src="'.$album["eventcover"].'" width="200" height="200" alt="afb"> </a></li>');
+                                if(++$i == $albumsperpagina) break;     //new
                             }
                             
                         }
@@ -56,12 +66,21 @@
                     </ul>
                 </div>
             </section>
-
         </div>
-
-
+        <div class="pagination">
+            <ul class="numbers">
+                <a href="fotoboekmenu.php?page=<?php if($page > 1) { $previousPage = $page-1; print($previousPage);} else{print("5");}?>">Vorige</a>
+                <a href="fotoboekmenu.php?page=1">1</a>
+                <a href="fotoboekmenu.php?page=2">2</a>
+                <a href="fotoboekmenu.php?page=3">3</a>
+                <a href="fotoboekmenu.php?page=4">4</a>
+                <a href="fotoboekmenu.php?page=5">5</a>
+                <a href="fotoboekmenu.php?page=<?php if($page < 5) { $nextPage = $page+1; print($nextPage);} else{print("1");}?>">Volgende</a>
+                <!-- de 1 en 5 bij vorige en volgende zijn afhankelijk van het aantal fotoboekpagina's -->
+            </ul>
         </div>
-        
+    </div>
+
 
 
         <style type="text/css">
@@ -122,6 +141,27 @@
 
         .gallery img:hover {
             border:1px solid #fff;
+        }
+
+        .pagination {
+            width:100%;
+        }
+
+        .numbers {
+            display:inline;
+            padding-left:540px;
+        }
+
+        .numbers a{
+            color:#000000;
+        }
+
+        .numbers a:visited {
+            color:#000000;
+        }
+
+        .numbers a:hover {
+            color:grey;
         }
 
         </style>
