@@ -16,6 +16,9 @@ if($_SESSION['user_type'] !== 'admin')
 } else {
     if (isset($_GET["id"]) && $_GET["id"] != "") {
         $id = $_GET["id"];
+        if($id > 2) {
+            header ('location: index.php');
+        }
         try {
             if (isset($_GET["opslaan"])) {
                 $stmt = $con->prepare("UPDATE text SET bericht=? WHERE id=?");
@@ -38,6 +41,7 @@ if($_SESSION['user_type'] !== 'admin')
         $melding = "Het id nummer ontbreekt";
     }
 }
+
 ?>
 
 <html>

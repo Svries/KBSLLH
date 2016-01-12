@@ -6,6 +6,9 @@
 * {
     font-family: 'Macondo';
 }
+.center {
+    text-align:center;
+}
 
 body {
     background: url("FOTO/Vischpoort.jpg") no-repeat center center fixed;
