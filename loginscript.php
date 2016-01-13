@@ -15,7 +15,7 @@ if(!isset( $_POST['email'], $_POST['password'])) {
 
 else {
 
-    /*** Variabelen aanmaken en password hashen ***/
+    // Variabelen aanmaken en password hashen 
     $email = $_POST['email'];
     $password = $_POST['password'];
     
@@ -28,37 +28,37 @@ else {
     {
         require_once 'connection.php';
 
-        /*** Query ***/
+        // Query 
         $stmt = $con->prepare("SELECT * FROM gebruiker 
                     WHERE email = :email AND password = :password");
 
         $stmt2 = $con->prepare("SELECT * FROM gebruiker 
                     WHERE email = :email AND password = :password");
-        /*** Bind de parameters aan elkaar ***/
+        // Bind de parameters aan elkaar
         $stmt->bindParam('email', $email, PDO::PARAM_STR);
         $stmt->bindParam('password', $password, PDO::PARAM_STR);
 
         $stmt2->bindParam('email', $email, PDO::PARAM_STR);
         $stmt2->bindParam('password', $password, PDO::PARAM_STR);
-        /*** Voert het hierboven gemaakte statement uit ***/
+        // Voert het hierboven gemaakte statement uit 
         $stmt->execute();
         $stmt2->execute();
 
-        /*** Kijkt of er een resultaat is ***/
+        // Kijkt of er een resultaat is 
         $user_id = $stmt->fetchColumn();
         $user_type = $stmt2->fetchColumn(1);
-        /*** Als er geen resultaat is, foute gegevens ***/
+        // Als er geen resultaat is, foute gegevens
         if($user_id == false)
         {
                header ('location: loginpage.php');
         }
         else
         {
-                /*** De sessie in  een variabele zetten ***/
+                // De sessie in  een variabele zetten
                 $_SESSION['user_id'] = $user_id;
                 $_SESSION['user_type'] = $user_type;
 
-                /*** succes ***/
+                //succes
                 header ('location: dashboard.php');
         }
 
@@ -66,7 +66,7 @@ else {
     }
     catch(Exception $e)
     {
-        /*** Database fout ***/
+        // Database fout 
         $message = 'Er is iets fout gegaan..."';
     }
     $con = NULL;

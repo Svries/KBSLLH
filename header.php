@@ -88,12 +88,13 @@
 
                     if(isset( $_SESSION['user_id'] ))
                     {
-                            echo "<ul><li><a href=\"dashboard.php\">Administrator</a></li></ul>";
+                            echo "<ul><li><a href=\"dashboard.php\">Dashboard</a></li></ul>";
                     }
                     ?>
                 </div>    
                 
                     <?php
+                    // kijkt of de gebruiker is ingelogd, zoja dan laat hij de uitlog knop zien
                     if(!isset( $_SESSION['user_id'] ))
                     {
                         echo "<p class=\"menu2\"><a href=\"loginpage.php\">Inloggen</a></p>";

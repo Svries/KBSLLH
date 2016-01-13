@@ -3,10 +3,6 @@
     <head>
     <?php include 'head.php'; ?>
 
-    <!--[if IE]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     </head>
     <body>
         <header>
