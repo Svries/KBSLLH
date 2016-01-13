@@ -34,6 +34,9 @@ require 'connection.php';
         </header>
 
         <div class="info">
+ 
+<!--- Bovenste gedeelte tekst -->          
+
           <div class="infospeelpagina">
             <h3>Spelerspagina</h3>
               <p>LHH is altijd op zoek naar spelers, die
@@ -50,6 +53,8 @@ require 'connection.php';
                     We verwelkomen iedereen: Oud en vooral ook jong. Neem contact met ons op via het telefoonnummer 06 405 78 385 of mail: <a class="contactlink" href="http://localhost:8080/KBSLLH/Contact.php">levendehistorie@hotmail.com</a>
               </p>
           </div>
+
+<!--- Onderste gedeelte, plaatsen van spelers vanuit de database -->
 
             <?php
             foreach ($gebruikers as $gebruiker){
@@ -73,138 +78,5 @@ require 'connection.php';
     </body>
 </html>
 
-<!--- REGEL1 -->          
-<!--
-          <div class="persoregel">
-            <div class="left">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <?php
-                    foreach ($gebruikers as $gebruiker) {  
-                    ?>
-                    <h3><a href='#' id='example-show' class='showLink' onclick='showHide("example");return false;'><?php echo $gebruiker["naam"]?></a></h3>
-                    
-                    <?php  
-                   // print ("<h3><a href='#' id='example-show' class='showLink' onclick='showHide(\'example\');return false;'>" . ($gebruiker["naam"]) . "</a></h3>");
-                  }
-                    ?>
-                            <a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">
-                                <div id="example" class="more">
-                                    <h3 style=>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            </a>
-            </div>
 
-            <div class="center">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-               
-                    <h3><a href='#' id='example2-show' class='showLink' onclick='showHide("example2");return false;'><?php echo $gebruikers["naam"]?></a></h3>
-
-                            <a href="#" id="example2-hide" class="hideLink" onclick="showHide('example2');return false;">
-                                <div id="example2" class="more">
-                                    <h3>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            </a>
-            </div>
-
-            <div class="right">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example3-show" class="showLink" onclick="showHide('example3');return false;">"naam"</a></h3>
-                            <a href="#" id="example3-hide" class="hideLink" onclick="showHide('example3');return false;">
-                                <div id="example3" class="more">
-                                    <h3>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            
-                            </a>
-            </div>
-          </div>
-
-
-
-          <div class="persoregel">
-            <div class="left">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example4-show" class="showLink" onclick="showHide('example4');return false;">"naam"</a></h3>
-                            <a href="#" id="example4-hide" class="hideLink" onclick="showHide('example4');return false;">
-                                <div id="example4" class="more">
-                                    <h3 style=>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            </a>
-            </div>
-
-            <div class="center">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example5-show" class="showLink" onclick="showHide('example5');return false;">"naam"</a></h3>
-                            <a href="#" id="example5-hide" class="hideLink" onclick="showHide('example5');return false;">
-                                <div id="example5" class="more">
-                                    <h3>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            </a>
-            </div>
-
-            <div class="right">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example6-show" class="showLink" onclick="showHide('example6');return false;">"naam"</a></h3>
-                            <a href="#" id="example6-hide" class="hideLink" onclick="showHide('example6');return false;">
-                                <div id="example6" class="more">
-                                    <h3>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            
-                            </a>
-            </div>
-          </div>
-
-
-
-          <div class="persoregel">
-            <div class="left">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example7-show" class="showLink" onclick="showHide('example7');return false;">"naam"</a></h3>
-                            <a href="#" id="example7-hide" class="hideLink" onclick="showHide('example7');return false;">
-                                <div id="example7" class="more">
-                                    <h3 style=>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            </a>
-            </div>
-
-            <div class="center">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example8-show" class="showLink" onclick="showHide('example8');return false;">"naam"</a></h3>
-                            <a href="#" id="example8-hide" class="hideLink" onclick="showHide('example8');return false;">
-                                <div id="example8" class="more">
-                                    <h3>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            </a>
-            </div>
-
-            <div class="right">
-                <img class="personagefoto" src="http://shackmanlab.org/wp-content/uploads/2013/07/person-placeholder.jpg">
-                    <h3><a href="#" id="example9-show" class="showLink" onclick="showHide('example9');return false;">"naam"</a></h3>
-                            <a href="#" id="example9-hide" class="hideLink" onclick="showHide('example9');return false;">
-                                <div id="example9" class="more">
-                                    <h3>"naam"</h3>
-                                        <p>"verhaaltje"</p>
-         
-                                </div>
-                            
-                            </a>
-            </div>
-          </div>
----->
-<!--- REGEL4 -->
 
