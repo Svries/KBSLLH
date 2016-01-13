@@ -38,7 +38,7 @@ $eindtijd = "";
 if (isset($_GET["eindtijd"])) {
     $eindtijd = $_GET["eindtijd"];
 }
-
+// terug sturen van aangepaste data naar database
 if (isset($_GET["id"]) && $_GET["id"] != "") {
     $id = $_GET["id"];
     try {
@@ -48,6 +48,7 @@ if (isset($_GET["id"]) && $_GET["id"] != "") {
             
             $melding = "De gegevens zijn opgeslagen";
         }
+        //op halen van gegevens van aan te passen evenement
         $stmt = $con->prepare("SELECT * FROM evenement WHERE id=?");
         $stmt->execute(array($_GET["id"]));
         $event = $stmt->fetch();
@@ -77,7 +78,7 @@ if (isset($_GET["id"]) && $_GET["id"] != "") {
         <header>
             <?php include 'header.php'; ?>
         </header>
-    
+    <!-- hieronder tabel waar admin de gegevens kan aanpassen -->
         <div class="info">
         <form method="get" action="eventbewerk.php">
             <table class="flat-table">
@@ -98,11 +99,6 @@ if (isset($_GET["id"]) && $_GET["id"] != "") {
                     <td><input type="text" name="begintijd" value="<?php print($begintijd); ?>"> tot <input type="text" name="eindtijd" value="<?php print($eindtijd); ?>"></td>
                     <td><textarea rows="5" cols="40" name="omschrijving" value="<?php print($omschrijving); ?>"></textarea></td>
                     <td><input type="submit" name="opslaan" value="Opslaan"></td>
-                    <!-- <td><input type="text" name="naam" value="<?php print($naam); ?>"></td>
-                    <td><input type="text" name="achternaam" value="<?php print($achternaam); ?>"></td>
-                    <td><input type="text" name="spelersnaam" value="<?php print($spelersnaam); ?>"></td>
-                    <td><input type="text" name="email" value="<?php print($email); ?>"></td>
-                    <td><input type="submit" name="opslaan" value="Opslaan"></td> -->
                 </tr>
             </table>
         </form>
