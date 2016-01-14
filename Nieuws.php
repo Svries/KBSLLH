@@ -1,9 +1,54 @@
+<?php
+
+/*** begin the session ***/
+session_start();
+
+if(!isset($_SESSION['user_id']))
+{
+    header('location: loginpage.php');
+}
+else
+{
+    try
+    {
+        require_once 'connection.php';
+        /*** prepare the insert ***/
+        $stmt = $con->prepare("SELECT email FROM gebruiker 
+        WHERE id = :id");
+
+        /*** bind the parameters ***/
+        $stmt->bindParam(':id', $_SESSION['user_id'], PDO::PARAM_INT);
+
+        /*** execute the prepared statement ***/
+        $stmt->execute();
+
+        /*** check for a result ***/
+        $email = $stmt->fetchColumn();
+
+        /*** if we have no something is wrong ***/
+        if($email == false)
+        {
+            $message = 'Access Error';
+        }
+        else
+        {
+            $message = 'Welcome '.$email;
+        }
+    }
+    catch (Exception $e)
+    {
+        /*** if we are here, something is wrong in the database ***/
+        $message = 'We are unable to process your request. Please try again later"';
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
      <?php include 'head.php';?>
     </head>
-    
+
     <body> 
         <header>
             <?php include 'header.php'; ?>
@@ -14,8 +59,10 @@
                                 <a href = "Nieuws.php?gb=true">Nieuw bericht</a>
                                 <hr>
                                 <?php
+                                //connectie aanroepen
                                 require_once("connection.php");
                                 if (isset($_GET['gb'])){
+                                    //invullen informatie
                                     echo"
                                     <form action = '' method = 'POST'>
                                     Titel:<br>
@@ -29,34 +76,59 @@
                                         //variabelen definieren
                                         $titel = $_POST['titel'];
                                         $bericht = $_POST['bericht'];
-                                        
                                         //sql voor plaatsen
                                         $sql = "INSERT INTO nieuws(titel, bericht) VALUES ('$titel', '$bericht')";
-                                        $stmt = $con->query($sql);
+                                        $stmt = $con->prepare($sql);
                                         $stmt->execute();
                                         echo "Uw nieuwsbericht is geplaatst.";
                                     }
                                     }else{
-                                        //SQL
+                                        //SQL voor ophalen nieuws
                                         $sql = "SELECT * FROM nieuws ORDER BY datum DESC";
-                                        $stmt = $con->Query ($sql);
+                                        $stmt = $con->prepare ($sql);
                                         $stmt->Execute();
                                         $stmt->setFetchMode(PDO::FETCH_ASSOC);
                                         if($stmt->rowCount() > 0){
                                             while($row = $stmt->fetch()){
-                                                echo "
-                                                <b>Titel: </b>".$row['titel']."<br>
-                                                <b>Date: </b>".$row['datum']."<br>
-                                                <b>Bericht:</b><br>
-                                                <p>
-                                                ".$row['bericht']."
-                                                </p>
-                                                <hr>
-                                                ";
+                                                //hieronder volgt het bericht en poging tot verwijderknop
+                                                    echo '<tr>
+                                                    <td><b>Titel: </b>' . $row['titel'] . '<br></td>
+                                                    <td><b>Date: </b>' . $row['datum'] . '<br></td>
+                                                    <td><b>Bericht:</b><br>' . $row['bericht'] . '</td>
+                                                    <td class="" id=""></td>
+                                                    <td class="delete">
+                                                        <form action="delete.php?name=' .  $row['datum'] . '" method="post">
+                                                        <input type="hidden" name="datum" value="' . $row['datum'] . '">
+                                                            <button type="submit" name="submit">
+                                                                <i class="fa fa-trash fa-lg"></i>
+                                                            </button>
+                                                            <hr>
+                                                        </form>
+                                                    </td>
+
+                                                    </tr>';
+                                                
                                             }
                                         }
                                     };
+
+                                    
+                                    function get_paging_info($tot_rows,$pp,$curr_page)
+                                        {
+                                            $pages = ceil($tot_rows / $pp); // calc pages
+
+                                            $data = array(); // start out array
+                                            $data['si']        = ($curr_page * $pp) - $pp; // what row to start at
+                                            $data['pages']     = $pages;                   // add the pages
+                                            $data['curr_page'] = $curr_page;               // Whats the current page
+
+                                            return $data; //return the paging data
+
+                                        }
+                                        include 'paginanummering.php';
                                     ?>
+
+
                             </div><!--Closing "central"/Div 3-->
         </div>
     </body>

@@ -87,6 +87,7 @@
                     <?php
 
                     if(isset( $_SESSION['user_id'] ))
+                        // kijkt of de gebruiker is ingelogd, zoja dan laat hij de dashboard knop zien
                     {
                             echo "<ul><li><a href=\"dashboard.php\">Dashboard</a></li></ul>";
                     }

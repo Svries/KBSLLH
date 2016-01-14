@@ -55,7 +55,7 @@ else
     echo $message . "<br>";  
 
     if(isset($_SESSION['user_id'])){ 
-        if($_SESSION['user_type'] == "admin") {
+        if($_SESSION['user_type'] = "admin") {
                 echo "<a href=\"spelersoverzicht.php\">Spelersoverzicht</a><br>";
                 echo "<a href=\"materiaaloverzicht.php\">Materiaaloverzicht</a><br>";
                 echo "<a href=\"materiaalperspeler.php\">Materiaal per speler</a><br>";

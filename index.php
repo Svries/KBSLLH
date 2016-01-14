@@ -22,7 +22,7 @@
             if(isset( $_SESSION['user_id'] ))
                 // kijkt of de user is ingelogd
                     {
-                        if($_SESSION['user_type'] == 'admin')
+                        if($_SESSION['user_type'] = 'admin')
                         // kijkt of de user een administrator is, zoja dan laat hij de knop bewerken zien
                         {
                             print("<td><a href=\"artiekelbewerk.php?id=" . $item["id"] . "\">Bewerken</a></td>");
