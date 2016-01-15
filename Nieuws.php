@@ -77,7 +77,7 @@ else
                                         $titel = $_POST['titel'];
                                         $bericht = $_POST['bericht'];
                                         //sql voor plaatsen
-                                        $sql = ("INSERT INTO nieuws(titel, bericht) VALUES ('$titel', '$bericht')";
+                                        $sql = "INSERT INTO nieuws(titel, bericht) VALUES ('$titel', '$bericht')";
                                         $stmt = $con->prepare($sql);
                                         $stmt->execute();
                                         echo "Uw nieuwsbericht is geplaatst.";

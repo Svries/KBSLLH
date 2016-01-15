@@ -61,6 +61,7 @@ else
                 echo "<a href=\"materiaalperspeler.php\">Materiaal per speler</a><br>";
         }
                 echo "<a href=\"Inschrijf.php\">Inschrijven markt</a><br>";
+                echo "<a href=\"Nieuws.php\">Nieuws</a><br>";
                 echo "<a href=\"reset_password.php\">Wachtwoord wijzigen</a><br>";
     }
     ?>
